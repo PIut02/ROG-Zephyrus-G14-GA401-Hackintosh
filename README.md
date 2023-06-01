@@ -75,7 +75,7 @@
 
 - 使用Windows后，要使声卡在Mac OS中工作必须要强制关机重启进入Mac OS
 
-- VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加-nredvcn至boot-args，具体请移至NootedRed页面查看最新进展
+- VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
 
 ### 温度
 
