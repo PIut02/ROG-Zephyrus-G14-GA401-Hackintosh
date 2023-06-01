@@ -6,13 +6,14 @@
 
 - 本EFI仅供Big Sur使用，其他版本未经验证
 - 机型信息已删除，请自行生成更换
-- OpneCore版本0.9.2 release
+- OpneCore版本：0.9.2
+- 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
 ## 警告
 
-- 安装或更新系统时注意在config.plist中禁用NootedRed驱动，否则安装过程中会卡进度条无法正常安装
-- 安装或更新系统时请在config.plist中禁用USBMap驱动或自行定制
+- 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装
+- 安装或更新系统时请在`config.plist`中禁用`USBMap`驱动或自行定制
 
 ## 配置
 
@@ -76,7 +77,7 @@
 
 ### 温度
 
-可以通过关闭CPS(core performence boost）将温度控制在比较合适的范围，但是会损失一部分性能。可以通过UMAF在bios中关闭CPS，但是会影响其他系统比如windows的性能，建议是每次开机进系统后通过AMD Power Gadget关闭，至少目前是只能这样。
+可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过UMAF工具在BIOS中关闭`CPS，但是会影响其他系统比如windows的性能，建议是每次开机进系统后通过AMD Power Gadget关闭，至少目前是只能这样。
 
 ## 了解你的EFI
 
