@@ -16,8 +16,6 @@
 
 **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
----
-
 ## 配置
 
 | 部件             | 型号                  |
@@ -32,7 +30,6 @@
 | 音频/3.5耳机接口 | ALC289                |
 | 内存             | DDR4 3200MHz 16G      |
 
----
 ## 总览
 
 ### 正常工作
@@ -61,8 +58,6 @@
 
 - 亮度、声音快捷键
 
-  ---
-
 ### 无法工作
 
 - 睡眠
@@ -79,13 +74,9 @@
 
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加-nredvcn至boot-args，具体请移至NootedRed页面查看最新进展
 
-  ---
-
 ### 温度
 
 可以通过关闭CPS(core performence boost）将温度控制在比较合适的范围，但是会损失一部分性能。可以通过UMAF在bios中关闭CPS，但是会影响其他系统比如windows的性能，建议是每次开机进系统后通过AMD Power Gadget关闭，至少目前是只能这样。
-
----
 
 ## 了解你的EFI
 
@@ -103,7 +94,6 @@ SSDT-PNLF | NootedRed提供，用于屏幕亮度调整
 SSDT-dGPU-Off | 关闭独显 
 SSDT-RMNE | 配合NullEthernet.kext内置网卡实现Apple ID登录 
 
----
 ### Kexts
 
 Kext | 作用
@@ -133,7 +123,6 @@ IntelBluetoothFirmware | 蓝牙驱动
 IntelBluetoothInjector | 蓝牙驱动 
 IntelBTPatcher | 蓝牙驱动 
 
----
 ## 致谢
 
 https://github.com/NootInc/NootedRed
