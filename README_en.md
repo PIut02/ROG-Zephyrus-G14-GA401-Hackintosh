@@ -75,7 +75,7 @@ This English document is mostly translated by ChatGPT.
 
 - If you use Windows first, you must force shutdown and restart to enter Mac OS to make the sound card work in Mac OS.
 
-- VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add -nredvcn to boot-args, please move to NootedRed page for the latest progress
+- VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
 
 ### Temperature
 
