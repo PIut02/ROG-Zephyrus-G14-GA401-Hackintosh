@@ -1,4 +1,4 @@
-# ROG-Zephyrus-G14-GA401IV-Hackintosh
+# ROG-Zephyrus-G14-GA401IV-Hackintosh(2020)
 
 [中文](README.md)/[English](README_en.md)
 
