@@ -2,6 +2,8 @@
 
 [中文](README.md)/[English](README_en.md)
 
+![1](C:\Users\15121\Desktop\1.png)
+
 ## 说明
 
 - 本EFI仅供Big Sur使用，其他版本未经验证
