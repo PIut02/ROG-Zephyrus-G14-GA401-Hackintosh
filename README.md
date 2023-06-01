@@ -2,7 +2,7 @@
 
 [中文](README.md)/[English](README_en.md)
 
-![1](C:\Users\15121\Desktop\1.png)
+![1](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/86b55723-bf91-4830-8dc3-be19ba0f1666)
 
 ## 说明
 
