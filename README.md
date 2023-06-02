@@ -8,7 +8,7 @@
 
 - 本EFI仅供Big Sur使用，其他版本未经验证
 - 机型信息已删除，请自行生成更换
-- OpneCore版本：0.9.2
+- OpenCore版本：0.9.2
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
