@@ -8,7 +8,7 @@ This English document is mostly translated by ChatGPT.
 
 - This EFI is only for use with Big Sur, other versions are not verified
 - The model information has been deleted, please generate and replace it by yourself
-- OpneCore version: 0.9.2
+- OpenCore version: 0.9.2
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
 - **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
 
