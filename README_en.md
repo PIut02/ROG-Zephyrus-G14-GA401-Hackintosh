@@ -6,7 +6,7 @@ This English document is mostly translated by ChatGPT.
 
 ## Description
 
-- This EFI is only for use with Big Sur, other versions are not verified
+- The available versions for this EFI are BigSur/Monterey, and Ventura is not currently supported
 - The model information has been deleted, please generate and replace it by yourself
 - OpenCore version: 0.9.2
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
@@ -61,7 +61,9 @@ This English document is mostly translated by ChatGPT.
 
 ### Not Working
 
-- Sleep
+- Sleep(Only in BigSur)
+
+- Unable to log in to Apple Store/Apple Music account on Mac
 
 - Internal microphone and speakers
 
@@ -114,7 +116,7 @@ By turning off `CPS(core performance boost)`, the temperature can be controlled 
 | USBToolBox                 | USB customization                                            |
 | USBMap                     | USB customization, not universal, need to customize by yourself |
 | VirtualSMC                 | Must-have                                                    |
-| AsusSMC                    | Keyboard support                                             |
+| AsusSMC                    | Keyboard support(not working)                                |
 | NootedRed                  | AMD Integrated Graphics driver                               |
 | NullEthernet               | Enables devices without network ports to log in to iCloud on MacOS |
 | VoodooI2C                  | Touchpad or touchscreen driver                               |

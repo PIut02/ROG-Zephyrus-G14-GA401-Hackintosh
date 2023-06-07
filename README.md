@@ -6,9 +6,9 @@
 
 ## 说明
 
-- 本EFI仅供Big Sur使用，其他版本未经验证
+- 本EFI可用版本:BigSur/Monterey，暂不支持Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本：0.9.2
+- OpenCore版本:0.9.2
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
@@ -61,20 +61,14 @@
 
 ### 无法工作
 
-- 睡眠
-
+- 睡眠(仅BigSur)
+- Mac Apple Store/Apple Music无法登录账户
 - 内置麦克风及扬声器
-
 - 3.5mm 耳机输入(但蓝牙输入输出可以工作)
-
 - NVIDIA RTX 2060 MAX-Q
-
 - 第三方浏览器无法正常使用硬件加速(Edge)
-
 - 键盘背光控制、Fn快捷键(驱动没有正常工作)
-
 - 使用Windows后，要使声卡在Mac OS中工作必须要强制关机重启进入Mac OS
-
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
 
 ### 温度
@@ -114,7 +108,7 @@ SMCLightSensor | 用于笔记本电脑上的环境光传感器
 USBToolBox | USB定制
 USBMap | USB定制，不通用需要自行定制 
 VirtualSMC | 必备
-AsusSMC | 键盘支持 
+AsusSMC | 键盘支持(无法工作) 
 NootedRed | AMD核显驱动
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 VoodooI2C | 触控板或触屏驱动
