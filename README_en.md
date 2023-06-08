@@ -6,7 +6,7 @@ This English document is mostly translated by ChatGPT.
 
 ## Description
 
-- The available versions for this EFI are BigSur/Monterey, and Ventura is not currently supported
+- The available versions for this EFI are BigSur/Monterey/Ventura
 - The model information has been deleted, please generate and replace it by yourself
 - OpenCore version: 0.9.2
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
