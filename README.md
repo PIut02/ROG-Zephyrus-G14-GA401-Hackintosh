@@ -3,6 +3,7 @@
 [中文](README.md)/[English](README_en.md)
 
 ![1](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/86b55723-bf91-4830-8dc3-be19ba0f1666)
+![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/e32b0e7d-1751-4f90-a6f4-3666a564a4e2)
 
 ## 说明
 
