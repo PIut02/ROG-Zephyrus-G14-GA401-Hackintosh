@@ -16,14 +16,6 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-CPUR.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
                     <string>SSDT-ALS0.aml</string>
                     <key>Enabled</key>
                     <true/>
@@ -549,24 +541,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>HoRNDIS.kext</string>
-                    <key>Comment</key>
-                    <string>V9.2 | HoRNDIS.kext</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/HoRNDIS</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>NVMeFix.kext</string>
                     <key>Comment</key>
                     <string>V1.1.0 | NVMeFix.kext</string>
@@ -916,42 +890,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/IntelBTPatcher</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>NootedRed.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.0</string>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NootedRed</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>AsusSMC.kext</string>
-                    <key>Comment</key>
-                    <string>V1.4.1</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AsusSMC</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>

@@ -11,6 +11,7 @@
 - 机型信息已删除，请自行生成更换
 - OpenCore版本:0.9.2
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
+- 因NootInc驱动团队禁止分发NootedRed驱动，本EFI已移除该驱动，请前往https://github.com/NootInc/NootedRed自行下载添加
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
 ## 警告
@@ -62,7 +63,7 @@
 
 ### 无法工作
 
-- 睡眠(仅BigSur)
+- 长时间睡眠后无法唤醒
 - Mac Apple Store/Apple Music无法登录账户
 - 内置麦克风及扬声器
 - 3.5mm 耳机输入(但蓝牙输入输出可以工作)
@@ -109,7 +110,6 @@ SMCLightSensor | 用于笔记本电脑上的环境光传感器
 USBToolBox | USB定制
 USBMap | USB定制，不通用需要自行定制 
 VirtualSMC | 必备
-AsusSMC | 键盘支持(无法工作) 
 NootedRed | AMD核显驱动
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 VoodooI2C | 触控板或触屏驱动
@@ -120,6 +120,7 @@ AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
 IntelBluetoothFirmware | 蓝牙驱动
 IntelBluetoothInjector | 蓝牙驱动 
 IntelBTPatcher | 蓝牙驱动 
+AmdTscSync | CPU频率同步，配合内核补丁控制功耗 
 
 ## 致谢
 

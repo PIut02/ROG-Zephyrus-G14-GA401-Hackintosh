@@ -16,14 +16,6 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-CPUR.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
                     <string>SSDT-ALS0.aml</string>
                     <key>Enabled</key>
                     <true/>
@@ -85,14 +77,6 @@
                     <true/>
                     <key>Path</key>
                     <string>SSDT-dGPU-Off.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-SBUS-MCHC.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -508,24 +492,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>CPUFriend.kext</string>
-                    <key>Comment</key>
-                    <string>V1.2.6</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/CPUFriend</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>AmdTscSync.kext</string>
                     <key>Comment</key>
                     <string>V2.0.0</string>
@@ -551,24 +517,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AMDRyzenCPUPowerManagement</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>NootedRed.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.0</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NootedRed</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -871,24 +819,6 @@
                     <string>UTBMap.kext</string>
                     <key>Comment</key>
                     <string>V1.1</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>CPUFriendDataProvider.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -2026,6 +1956,66 @@
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>Visual - thread_quantum_expire, thread_unblock, thread_invoke - Remove non-monotonic panic macOS 12+</string>
+                    <key>Count</key>
+                    <integer>3</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>SAAAAAIAAEgAAFgAAAAPAAAAAAA=</data>
+                    <key>Identifier</key>
+                    <string>kernel</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>/wAAD/////8AAP8AAAD/AAAAAAA=</data>
+                    <key>MaxKernel</key>
+                    <string>23.99.99</string>
+                    <key>MinKernel</key>
+                    <string>21.0.0</string>
+                    <key>Replace</key>
+                    <data>AAAAAAAAAAAAAAAAAABmkGaQZpA=</data>
+                    <key>ReplaceMask</key>
+                    <data>AAAAAAAAAAAAAAAAAAD///////8=</data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>Visual - thread_invoke, thread_dispatch - Remove non-monotonic panic macOS 12+</string>
+                    <key>Count</key>
+                    <integer>2</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>SAAAgAQAAA8AAAAAAA==</data>
+                    <key>Identifier</key>
+                    <string>kernel</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>SAAA8P////8AAAAAAA==</data>
+                    <key>MaxKernel</key>
+                    <string>23.99.99</string>
+                    <key>MinKernel</key>
+                    <string>21.0.0</string>
+                    <key>Replace</key>
+                    <data>AAAAAAAAAGaQZpBmkA==</data>
+                    <key>ReplaceMask</key>
+                    <data>AAAAAAAAAP///////w==</data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
             </array>
             <key>Quirks</key>
             <dict>
@@ -2159,6 +2149,24 @@
                     <string>CustomOS</string>
                     <key>Path</key>
                     <string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+                    <key>TextMode</key>
+                    <false/>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Auxiliary</key>
+                    <false/>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Flavour</key>
+                    <string>Auto</string>
+                    <key>Name</key>
+                    <string>FydeOS</string>
+                    <key>Path</key>
+                    <string>PciRoot(0x0)/Pci(0x2,0x4)/Pci(0x0,0x0)/NVMe(0x1,6B-30-D2-4B-8B-44-1B-00)/HD(1,GPT,F3C7AC20-52C0-11ED-B1F8-D644700753B4,0x800,0x80EE1)/\EFI\fydeos\bootx64.efi</string>
                     <key>TextMode</key>
                     <false/>
                 </dict>
@@ -2645,7 +2653,7 @@
                 <key>ROM</key>
                 <data></data>
                 <key>SpoofVendor</key>
-                <true/>
+                <false/>
                 <key>SystemMemoryStatus</key>
                 <string>Auto</string>
                 <key>SystemProductName</key>

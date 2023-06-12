@@ -11,6 +11,7 @@ This English document is mostly translated by ChatGPT.
 - The model information has been deleted, please generate and replace it by yourself
 - OpenCore version: 0.9.2
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
+- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI has removed that driver. Please go to https://github.com/NootInc/NootedRed to download and add it manually
 - **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
 
 ## Warning
@@ -117,7 +118,6 @@ By turning off `CPS(core performance boost)`, the temperature can be controlled 
 | USBToolBox                 | USB customization                                            |
 | USBMap                     | USB customization, not universal, need to customize by yourself |
 | VirtualSMC                 | Must-have                                                    |
-| AsusSMC                    | Keyboard support(not working)                                |
 | NootedRed                  | AMD Integrated Graphics driver                               |
 | NullEthernet               | Enables devices without network ports to log in to iCloud on MacOS |
 | VoodooI2C                  | Touchpad or touchscreen driver                               |
@@ -128,6 +128,7 @@ By turning off `CPS(core performance boost)`, the temperature can be controlled 
 | IntelBluetoothFirmware     | Bluetooth driver                                             |
 | IntelBluetoothInjector     | Bluetooth driver                                             |
 | IntelBTPatcher             | Bluetooth driver                                             |
+| AmdTscSync                 | CPU frequency synchronization, in conjunction with kernel patches, to control power consumption |
 
 ## Credit
 
