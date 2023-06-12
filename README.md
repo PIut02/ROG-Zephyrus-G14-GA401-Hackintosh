@@ -111,7 +111,6 @@ SMCLightSensor | 用于笔记本电脑上的环境光传感器
 USBToolBox | USB定制
 USBMap | USB定制，不通用需要自行定制 
 VirtualSMC | 必备
-NootedRed | AMD核显驱动
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 VoodooI2C | 触控板或触屏驱动
 VoodooI2CHID | 触控板或触屏驱动

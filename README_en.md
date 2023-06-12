@@ -119,7 +119,6 @@ By turning off `CPS(core performance boost)`, the temperature can be controlled 
 | USBToolBox                 | USB customization                                            |
 | USBMap                     | USB customization, not universal, need to customize by yourself |
 | VirtualSMC                 | Must-have                                                    |
-| NootedRed                  | AMD Integrated Graphics driver                               |
 | NullEthernet               | Enables devices without network ports to log in to iCloud on MacOS |
 | VoodooI2C                  | Touchpad or touchscreen driver                               |
 | VoodooI2CHID               | Touchpad or touchscreen driver                               |
