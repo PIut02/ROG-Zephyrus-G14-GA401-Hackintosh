@@ -64,7 +64,7 @@ This English document is mostly translated by ChatGPT.
 
 ### Not Working
 
-- Sleep(Only in BigSur)
+- Unable to wake up after a long period of sleep
 
 - Unable to log in to Apple Store/Apple Music account on Mac
 
