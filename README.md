@@ -1,4 +1,4 @@
-# ROG-Zephyrus-G14-GA401IV-Hackintosh(2020)
+# ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)
 
 [中文](README.md)/[English](README_en.md)
 
@@ -12,6 +12,7 @@
 - OpenCore版本:0.9.2
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - 因NootInc驱动团队禁止分发NootedRed驱动，本EFI已移除该驱动，请前往[NootedRed](https://github.com/NootInc/NootedRed)自行下载添加
+- 本EFI以2020款制作，但应该兼容2021款
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
 ## 警告
