@@ -78,6 +78,14 @@
                     <key>Path</key>
                     <string>SSDT-dGPU-Off.aml</string>
                 </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>ssdt-rmne.aml</string>
+                </dict>
             </array>
             <key>Delete</key>
             <array>
@@ -458,7 +466,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.5 | Lilu.kext</string>
+                    <string>V1.6.6 | Lilu.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -476,7 +484,7 @@
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1</string>
+                    <string>V1.3.2</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -528,13 +536,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>NVMeFix.kext</string>
+                    <string>NootedRed.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.0 | NVMeFix.kext</string>
+                    <string>V1.0.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/NVMeFix</string>
+                    <string>Contents/MacOS/NootedRed</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -546,13 +554,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>AirportItlwm.kext</string>
+                    <string>NVMeFix.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0</string>
+                    <string>V1.1.0 | NVMeFix.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AirportItlwm</string>
+                    <string>Contents/MacOS/NVMeFix</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -584,7 +592,7 @@
                     <key>BundlePath</key>
                     <string>ECEnabler.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.3 | ECEnabler.kext</string>
+                    <string>V1.0.4 | ECEnabler.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -602,7 +610,7 @@
                     <key>BundlePath</key>
                     <string>RestrictEvents.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.1 | RestrictEvents.kext</string>
+                    <string>V1.1.2 | RestrictEvents.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -618,9 +626,27 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
+                    <string>DirectHW.kext</string>
+                    <key>Comment</key>
+                    <string>V1.4</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/DirectHW</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.2 | AppleALC.kext</string>
+                    <string>V1.8.3 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -726,6 +752,24 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
+                    <string>AirportItlwm.kext</string>
+                    <key>Comment</key>
+                    <string>V2.2.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
                     <string>SMCAMDProcessor.kext</string>
                     <key>Comment</key>
                     <string>V1 | SMCAMDProcessor.kext</string>
@@ -746,7 +790,7 @@
                     <key>BundlePath</key>
                     <string>SMCBatteryManager.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1 | SMCBatteryManager.kext</string>
+                    <string>V1.3.2 | SMCBatteryManager.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -764,7 +808,7 @@
                     <key>BundlePath</key>
                     <string>SMCLightSensor.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.1 | SMCLightSensor.kext</string>
+                    <string>V1.3.2 | SMCLightSensor.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -836,29 +880,11 @@
                     <key>BundlePath</key>
                     <string>FeatureUnlock.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.4</string>
+                    <string>V1.1.5</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/FeatureUnlock</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>CodecCommander.kext</string>
-                    <key>Comment</key>
-                    <string>V2.7.3</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/CodecCommander</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -924,13 +950,31 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>itlwm.kext</string>
+                    <string>AsusSMC.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0</string>
+                    <string>V1.4.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/itlwm</string>
+                    <string>Contents/MacOS/AsusSMC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>NullEthernet.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.6</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/NullEthernet</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1002,7 +1046,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>algrey - Force cpuid_cores_per_package 10.13,10.14</string>
+                    <string>algrey | Force cpuid_cores_per_package to constant (user-specified) | 10.13-10.14</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1032,7 +1076,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>algrey - Force cpuid_cores_per_package 10.15,11.0</string>
+                    <string>algrey | Force cpuid_cores_per_package to constant (user-specified) | 10.15-11.0</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1062,7 +1106,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>algrey - Force cpuid_cores_per_package 12.0/13.0</string>
+                    <string>algrey | Force cpuid_cores_per_package to constant (user-specified) | 12.0-13.2</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1082,7 +1126,7 @@
                     <key>Replace</key>
                     <data>uggAAACQ</data>
                     <key>ReplaceMask</key>
-                    <data>////////</data>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
@@ -1092,7 +1136,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>algrey - Force cpuid_cores_per_package 13.3+</string>
+                    <string>algrey | Force cpuid_cores_per_package to constant (user-specified) | 13.3+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1106,7 +1150,7 @@
                     <key>Mask</key>
                     <data>//3/AAA=</data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>22.4.0</string>
                     <key>Replace</key>
@@ -1122,7 +1166,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _commpage_populate - Remove rdmsr - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _commpage_populate | Remove rdmsr | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1136,11 +1180,11 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
-                    <data>Dx+AAAAAAA==</data>
+                    <data>ZpBmkGaQkA==</data>
                     <key>ReplaceMask</key>
                     <data></data>
                     <key>Skip</key>
@@ -1152,7 +1196,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_cache_info - Set cpuid to 0x8000001D instead 4 - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _cpuid_set_cache_info | Set CPUID proper instead of 4 | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1166,7 +1210,7 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
@@ -1182,7 +1226,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_generic_info - Remove wrmsr - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _cpuid_set_generic_info | Remove wrmsr(0x8B) | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1196,11 +1240,11 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
-                    <data>Zg8fhAAAAAAAZpA=</data>
+                    <data>ZpBmkGaQZpBmkJA=</data>
                     <key>ReplaceMask</key>
                     <data></data>
                     <key>Skip</key>
@@ -1212,7 +1256,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_generic_info - Set microcode=186 - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _cpuid_set_generic_info | Replace rdmsr(0x8B) with constant 186 | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1226,7 +1270,7 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
@@ -1242,7 +1286,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_generic_info - Set flag=1 - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _cpuid_set_generic_info | Set flag=1 | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1256,7 +1300,7 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
@@ -1272,7 +1316,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_generic_info - Disable check to allow leaf7 - 13.0</string>
+                    <string>algrey | _cpuid_set_generic_info | Disable check to allow leaf7 | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1286,9 +1330,9 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
-                    <string>22.0.0</string>
+                    <string>17.0.0</string>
                     <key>Replace</key>
                     <data>AAAPgg==</data>
                     <key>ReplaceMask</key>
@@ -1302,7 +1346,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_info - GenuineIntel to AuthenticAMD - 10.13/10.14/10.15/11.0</string>
+                    <string>algrey | _cpuid_set_info | GenuineIntel to AuthenticAMD | 10.13-11.0</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1332,7 +1376,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>Goldfish64 / algrey - Bypass GenuineIntel check panic - 12.0/13.0</string>
+                    <string>Goldfish64, algrey | Bypass GenuineIntel check panic | 12.0+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1346,7 +1390,7 @@
                     <key>Mask</key>
                     <data>AAAAAAAA/////w==</data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>21.0.0</string>
                     <key>Replace</key>
@@ -1362,7 +1406,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 10.13/10.14/10.15/11.2</string>
+                    <string>algrey | _cpuid_set_cpufamily | Force CPUFAMILY_INTEL_PENRYN | 10.13-11.2</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1392,7 +1436,7 @@
                     <key>Base</key>
                     <string>_cpuid_set_info</string>
                     <key>Comment</key>
-                    <string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 11.3 + / 12.0/13.0</string>
+                    <string>algrey | _cpuid_set_cpufamily | Force CPUFAMILY_INTEL_PENRYN | 11.3+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1406,7 +1450,7 @@
                     <key>Mask</key>
                     <data>//8AAAAA//8=</data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>20.4.0</string>
                     <key>Replace</key>
@@ -1422,7 +1466,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey - _i386_init - Remove rdmsr (x3) - 10.13/10.14/10.15/11.0/12.0/13.0</string>
+                    <string>algrey | _i386_init | Remove 3 rdmsr calls | 10.13+</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -1436,7 +1480,7 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
@@ -1452,7 +1496,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>algrey/XLNC - Remove version check and panic</string>
+                    <string>algrey, XLNC | Remove version check and panic | 10.13+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
@@ -1466,7 +1510,7 @@
                     <key>Mask</key>
                     <data></data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>17.0.0</string>
                     <key>Replace</key>
@@ -1482,27 +1526,27 @@
                     <key>Base</key>
                     <string>__ZN11IOPCIBridge13probeBusGatedEP14probeBusParams</string>
                     <key>Comment</key>
-                    <string>CaseySJ - probeBusGated Disable 10 bit tags - 12.0/13.0</string>
+                    <string>CaseySJ | probeBusGated | Disable 10 bit tags | 12.0+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
-                    <data>5hFyBg==</data>
+                    <data>4BFyAA==</data>
                     <key>Identifier</key>
                     <string>com.apple.iokit.IOPCIFamily</string>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data></data>
+                    <data>8P//8A==</data>
                     <key>MaxKernel</key>
-                    <string>22.99.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>21.0.0</string>
                     <key>Replace</key>
-                    <data>5hFzBg==</data>
+                    <data>AAADAA==</data>
                     <key>ReplaceMask</key>
-                    <data></data>
+                    <data>AAAPAA==</data>
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
@@ -1510,89 +1554,29 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>Base</key>
-                    <string></string>
+                    <string>__ZN17IOPCIConfigurator18IOPCIIsHotplugPortEP16IOPCIConfigEntry</string>
                     <key>Comment</key>
-                    <string>Shaneee - _mtrr_update_action fix PAT - 10.13/10.14/10.15/11.0/12.0/13.0</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data>////////D////////////////w==</data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>17.0.0</string>
-                    <key>Replace</key>
-                    <data>uXcCAAC4BgYGBroGBgYGDzAPCQ==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_unblock - Remove panic on variant TSC #1 - 12.0</string>
+                    <string>CaseySJ | IOPCIIsHotplugPort | Fix PCI bus enumeration on AM5 | 13.0+</string>
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Find</key>
-                    <data>SDnGD4fgAgAA</data>
+                    <data>hAB1Sw==</data>
                     <key>Identifier</key>
-                    <string>kernel</string>
+                    <string>com.apple.iokit.IOPCIFamily</string>
                     <key>Limit</key>
                     <integer>0</integer>
                     <key>Mask</key>
-                    <data></data>
+                    <data>/wD//w==</data>
                     <key>MaxKernel</key>
-                    <string>21.99.99</string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>Replace</key>
-                    <data>SDnGZpBmkGaQ</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_unblock - Remove panic on variant TSC #1 - 13.0/13.2.1</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SDnGD4enAgAA</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.3.99</string>
+                    <string>23.99.99</string>
                     <key>MinKernel</key>
                     <string>22.0.0</string>
                     <key>Replace</key>
-                    <data>SDnGZpBmkGaQ</data>
+                    <data>AADrAA==</data>
                     <key>ReplaceMask</key>
-                    <data></data>
+                    <data>AAD/AA==</data>
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
@@ -1602,367 +1586,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>Visual - _thread_unblock - Remove panic on variant TSC #1 - 13.3+</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SDnGD4U2BgAA</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>22.4.0</string>
-                    <key>Replace</key>
-                    <data>SDnGZpBmkGaQ</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_quantum_expire - Remove panic on variant TSC #2 - 12.0</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDn+D4dTAwAA</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>21.99.99</string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>Replace</key>
-                    <data>TDn+ZpBmkGaQ</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_quantum_expire - Remove panic on variant TSC #2 - 13.0/13.2.1</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDn+D4ceAwAA</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.3.99</string>
-                    <key>MinKernel</key>
-                    <string>22.0.0</string>
-                    <key>Replace</key>
-                    <data>TDn+ZpBmkGaQ</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_quantum_expire - Remove panic on variant TSC #2 - 13.3+</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDn+D4fMAgAA</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>22.4.0</string>
-                    <key>Replace</key>
-                    <data>TDn+ZpBmkGaQ</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #3 - 12.0</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SItwWEw57g+HJAUAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>21.99.99</string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>Replace</key>
-                    <data>SItwWEw57maQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #3 - 13.0/13.2.1</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SItwWEw55g+HWQUAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.3.99</string>
-                    <key>MinKernel</key>
-                    <string>22.0.0</string>
-                    <key>Replace</key>
-                    <data>SItwWEw55maQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #3 - 13.3+</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SItwWEw55g+HggUAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>22.4.0</string>
-                    <key>Replace</key>
-                    <data>SItwWEw55maQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #4 - 12.0</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDurgAQAAA+C8wQAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>21.99.99</string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>Replace</key>
-                    <data>TDurgAQAAGaQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #4 - 13.0/13.2.1</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDujgAQAAA+CKAUAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.3.99</string>
-                    <key>MinKernel</key>
-                    <string>22.0.0</string>
-                    <key>Replace</key>
-                    <data>TDujgAQAAGaQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_invoke - Remove panic on variant TSC #4 - 13.3+</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>TDujgAQAAA+CUQUAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>22.4.0</string>
-                    <key>Replace</key>
-                    <data>TDujgAQAAGaQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string>_thread_dispatch</string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_dispatch - Remove panic on variant TSC #5 - 12.0/13.0/13.2.3</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SSufgAQAAA+CXwEAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.3.99</string>
-                    <key>MinKernel</key>
-                    <string>21.0.0</string>
-                    <key>Replace</key>
-                    <data>SSufgAQAAGaQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string>_thread_dispatch</string>
-                    <key>Comment</key>
-                    <string>Visual - _thread_dispatch - Remove panic on variant TSC #5 - 13.3+</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SSufgAQAAA+CKAIAAA==</data>
-                    <key>Identifier</key>
-                    <string>kernel</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string>22.99.99</string>
-                    <key>MinKernel</key>
-                    <string>22.4.0</string>
-                    <key>Replace</key>
-                    <data>SSufgAQAAGaQZpBmkA==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Visual - thread_quantum_expire, thread_unblock, thread_invoke - Remove non-monotonic panic macOS 12+</string>
+                    <string>Visual | thread_quantum_expire, thread_unblock, thread_invoke | Remove non-monotonic time panic | 12.0+</string>
                     <key>Count</key>
                     <integer>3</integer>
                     <key>Enabled</key>
@@ -1992,7 +1616,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>Visual - thread_invoke, thread_dispatch - Remove non-monotonic panic macOS 12+</string>
+                    <string>Visual | thread_invoke, thread_dispatch | Remove non-monotonic time panic | 12.0+</string>
                     <key>Count</key>
                     <integer>2</integer>
                     <key>Enabled</key>
@@ -2013,6 +1637,66 @@
                     <data>AAAAAAAAAGaQZpBmkA==</data>
                     <key>ReplaceMask</key>
                     <data>AAAAAAAAAP///////w==</data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>algrey | _mtrr_update_action | fix PAT | 10.13+</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
+                    <key>Identifier</key>
+                    <string>kernel</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>////////D////////////////w==</data>
+                    <key>MaxKernel</key>
+                    <string>23.99.99</string>
+                    <key>MinKernel</key>
+                    <string>17.0.0</string>
+                    <key>Replace</key>
+                    <data>uXcCAAC4BgEHALoGAQcADx9AAA==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>Base</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>Shaneee | _mtrr_update_action | Fix PAT | 10.13+</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
+                    <key>Identifier</key>
+                    <string>kernel</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data>////////D////////////////w==</data>
+                    <key>MaxKernel</key>
+                    <string>23.99.99</string>
+                    <key>MinKernel</key>
+                    <string>17.0.0</string>
+                    <key>Replace</key>
+                    <data>uXcCAAC4BgYGBroGBgYGDzAPCQ==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
@@ -2149,24 +1833,6 @@
                     <string>CustomOS</string>
                     <key>Path</key>
                     <string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
-                    <key>TextMode</key>
-                    <false/>
-                </dict>
-                <dict>
-                    <key>Arguments</key>
-                    <string></string>
-                    <key>Auxiliary</key>
-                    <false/>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Flavour</key>
-                    <string>Auto</string>
-                    <key>Name</key>
-                    <string>FydeOS</string>
-                    <key>Path</key>
-                    <string>PciRoot(0x0)/Pci(0x2,0x4)/Pci(0x0,0x0)/NVMe(0x1,6B-30-D2-4B-8B-44-1B-00)/HD(1,GPT,F3C7AC20-52C0-11ED-B1F8-D644700753B4,0x800,0x80EE1)/\EFI\fydeos\bootx64.efi</string>
                     <key>TextMode</key>
                     <false/>
                 </dict>
@@ -2577,7 +2243,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>keepsyms=1 alcid=11 -wegnoegpu -vi2c-force-polling</string>
+                    <string>keepsyms=1 alcid=11 -wegnoegpu -vi2c-force-polling debug=0x44</string>
                     <key>prev-lang:kbd</key>
                     <data>ZW4tVVM6MA==</data>
                     <key>run-efi-updater</key>
@@ -2845,6 +2511,8 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
+                <key>ConsoleFont</key>
+                <string></string>
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
@@ -2913,6 +2581,8 @@
                 <key>HashServices</key>
                 <false/>
                 <key>OSInfo</key>
+                <false/>
+                <key>PciIo</key>
                 <false/>
                 <key>UnicodeCollation</key>
                 <false/>

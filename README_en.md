@@ -9,7 +9,7 @@ This English document is mostly translated by ChatGPT.
 
 - The available versions for this EFI are BigSur/Monterey/Ventura
 - The model information has been deleted, please generate and replace it by yourself
-- OpenCore version: 0.9.2
+- OpenCore version: 0.9.2/0.9.3
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
 - Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI has removed that driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
 - This EFI was made based on the 2020 model, but it should be compatible with the 2021 model
@@ -65,21 +65,12 @@ This English document is mostly translated by ChatGPT.
 ### Not Working
 
 - Unable to wake up after a long period of sleep
-
-- Unable to log in to Apple Store/Apple Music account on Mac
-
 - Internal microphone and speakers
-
 - 3.5mm headphone input (but Bluetooth input/output works)
-
 - NVIDIA RTX 2060 MAX-Q
-
 - Third-party browsers cannot use hardware acceleration normally (Edge)
-
 - Keyboard backlight control, Fn shortcut keys (the driver did not work properly)
-
 - If you use Windows first, you must force shutdown and restart to enter Mac OS to make the sound card work in Mac OS.
-
 - VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
 
 ### Temperature
@@ -133,6 +124,8 @@ By turning off `CPS(core performance boost)`, the temperature can be controlled 
 ## Credit
 
 https://github.com/NootInc/NootedRed
+
+https://github.com/NootInc/VoodooI2C
 
 https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh
 

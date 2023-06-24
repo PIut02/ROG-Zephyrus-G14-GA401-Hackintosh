@@ -2,14 +2,13 @@
 
 [中文](README.md)/[English](README_en.md)
 
-![1](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/86b55723-bf91-4830-8dc3-be19ba0f1666)
 ![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/e32b0e7d-1751-4f90-a6f4-3666a564a4e2)
 
 ## 说明
 
 - 本EFI可用版本:BigSur/Monterey/Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本:0.9.2
+- OpenCore版本:0.9.2/0.9.3
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - 因NootInc驱动团队禁止分发NootedRed驱动，本EFI已移除该驱动，请前往[NootedRed](https://github.com/NootInc/NootedRed)自行下载添加
 - 本EFI以2020款制作，但应该兼容2021款
@@ -29,7 +28,7 @@
 | 独立显卡         | NVIDIA RTX 2060 Max-Q |
 | 网卡/蓝牙        | Intel AX200           |
 | 硬盘             | WD SN570              |
-| 键盘             | PS2 controller        |
+| 键盘             | HID controller        |
 | 触摸板           | I2C HID               |
 | 音频/3.5耳机接口 | ALC289                |
 | 内存             | DDR4 3200MHz 16G      |
@@ -65,7 +64,6 @@
 ### 无法工作
 
 - 长时间睡眠后无法唤醒
-- Mac Apple Store/Apple Music无法登录账户
 - 内置麦克风及扬声器
 - 3.5mm 耳机输入(但蓝牙输入输出可以工作)
 - NVIDIA RTX 2060 MAX-Q
@@ -125,6 +123,8 @@ AmdTscSync | CPU频率同步，配合内核补丁控制功耗
 ## 致谢
 
 https://github.com/NootInc/NootedRed
+
+https://github.com/NootInc/VoodooI2C
 
 https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh
 
