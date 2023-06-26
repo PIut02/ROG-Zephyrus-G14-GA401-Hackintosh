@@ -1,9 +1,6 @@
 # ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)
 
-This English document is mostly translated by ChatGPT.
-
-![1](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/86b55723-bf91-4830-8dc3-be19ba0f1666)
-![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/3023017c-44af-4d54-bba8-355271968e3a)
+This English document is mostly translated by ChatGPT.![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/3023017c-44af-4d54-bba8-355271968e3a)
 
 ## Description
 
