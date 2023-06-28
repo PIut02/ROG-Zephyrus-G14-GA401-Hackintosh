@@ -42,7 +42,7 @@
 - IGPU
 
   - 硬件加速存在部分问题，等待[NootedRed](https://github.com/NootInc/NootedRed)驱动更新解决
-- 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
+  - 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
 - WIFI/蓝牙
 - Apple ID & iMessages & iCloud
 - 中断模式触摸板和键盘
