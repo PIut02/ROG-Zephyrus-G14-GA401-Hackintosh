@@ -28,8 +28,7 @@
 | 独立显卡         | NVIDIA RTX 2060 Max-Q |
 | 网卡/蓝牙        | Intel AX200           |
 | 硬盘             | WD SN570              |
-| 键盘             | HID controller        |
-| 触摸板           | I2C HID               |
+| 键盘/触摸板      | IC2 HID               |
 | 音频/3.5耳机接口 | ALC289                |
 | 内存             | DDR4 3200MHz 16G      |
 
@@ -39,37 +38,30 @@
 
 - CPU
 
-  - 使用[AMD Power Gadget](https://github.com/trulyspinach/SMCAMDProcessor)进行能源管理
-
+  - 使用[AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor)进行能源管理和温度查看
 - IGPU
 
   - 硬件加速存在部分问题，等待[NootedRed](https://github.com/NootInc/NootedRed)驱动更新解决
-
+- 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
 - WIFI/蓝牙
-
 - Apple ID & iMessages & iCloud
-
-- 触摸板和键盘
-
+- 中断模式触摸板和键盘
 - 1440p 60hz hidpi显示
-
-- 3.5mm 耳机声音输出
-
+- 内置扬声器及3.5mm 耳机声音输出
+- 所有USB接口
 - NVME SSD
-
 - Metal加速
-
 - 亮度、声音快捷键
 
-### 无法工作
+### 无法工作&现存问题
 
 - 长时间睡眠后无法唤醒
-- 内置麦克风及扬声器
-- 3.5mm 耳机输入(但蓝牙输入输出可以工作)
+- HDMI音频输出
+- 内置麦克风及3.5mm 耳机输入
 - NVIDIA RTX 2060 MAX-Q
 - 第三方浏览器无法正常使用硬件加速(Edge)
-- 键盘背光控制、Fn快捷键(驱动没有正常工作)
-- 使用Windows后，要使声卡在Mac OS中工作必须要强制关机重启进入Mac OS
+- 键盘背光控制、Fn快捷键(AsusSMC驱动没有正常工作)
+- 使用Windows后重启至macos耳机无声，强制关机重启进入macos后正常
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
 
 ### 温度
@@ -96,29 +88,34 @@ SSDT-RMNE | 配合NullEthernet.kext内置网卡实现Apple ID登录
 
 Kext | 作用
 :---------|:---------
+AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
 AMDRyzenCPUPowerManagement | AMD CPU 电源管理
+AmdTscSync | CPU频率同步，配合内核补丁控制功耗 
 AppleALC | 音频驱动
 AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
+BlueToolFixup | 蓝牙修复补丁，12及以上系统需要 
+BrightnessKeys | 亮度调节按键 
+DirectHW | 配合Ryzenadj控制功耗 
 ECEnabler | 电池读取
+FeatureUnlock | 在不支持的机型解锁功能 
+HoRNDIS | 支持安卓设备的USB共享网络 
+IntelBTPatcher | 蓝牙驱动 
+IntelBluetoothInjector | 蓝牙驱动 
+IntelBluetoothFirmware | 蓝牙驱动
 Lilu | 必备
+NullEthernet | 使无网口设备在MacOS可以登录iCloud
 NVMeFix | NVMe硬盘电源管理
 RestrictEvents | CPU改名
+RadeonSensor | 获取AMD显卡温度信息 
 SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
 SMCBatteryManager | 电池管理
 SMCLightSensor | 用于笔记本电脑上的环境光传感器 
+SMCRadeonGPU.kext | 获取AMD显卡温度信息 
 USBToolBox | USB定制
 USBMap | USB定制，不通用需要自行定制 
 VirtualSMC | 必备
-NullEthernet | 使无网口设备在MacOS可以登录iCloud
 VoodooI2C | 触控板或触屏驱动
 VoodooI2CHID | 触控板或触屏驱动
-BrightnessKeys | 亮度调节按键
-HoRNDIS | 支持安卓设备的USB共享网络 
-AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
-IntelBluetoothFirmware | 蓝牙驱动
-IntelBluetoothInjector | 蓝牙驱动 
-IntelBTPatcher | 蓝牙驱动 
-AmdTscSync | CPU频率同步，配合内核补丁控制功耗 
 
 ## 致谢
 

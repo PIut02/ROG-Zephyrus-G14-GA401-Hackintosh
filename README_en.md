@@ -1,6 +1,8 @@
 # ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)
 
-This English document is mostly translated by ChatGPT.![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/3023017c-44af-4d54-bba8-355271968e3a)
+This English document is mostly translated by ChatGPT.
+
+![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/e32b0e7d-1751-4f90-a6f4-3666a564a4e2)
 
 ## Description
 
@@ -19,104 +21,99 @@ This English document is mostly translated by ChatGPT.![1883474518](https://gith
 
 ## Configuration
 
-| Component                  | Model                 |
-| :------------------------- | :-------------------- |
-| CPU                        | AMD Ryzen 7 4800HS    |
-| Integrated Graphics        | AMD Radeon Vega 7     |
-| Graphics Card              | NVIDIA RTX 2060 Max-Q |
-| WiFi/Bluetooth             | Intel AX200           |
-| Hard Disk                  | WD SN570              |
-| Keyboard                   | PS2 controller        |
-| Touchpad                   | I2C HID               |
-| Audio/3.5mm Headphone Jack | ALC289                |
-| Memory                     | DDR4 3200MHz 16G      |
+| Component       | Model                  |
+| :-------------- | :--------------------- |
+| CPU             | AMD Ryzen 7 4800HS     |
+| Integrated Graphics| AMD Radeon Vega 7   |
+| Graphics Card   | NVIDIA RTX 2060 Max-Q  |
+| WiFi/Bluetooth  | Intel AX200            |
+| Hard Disk       | WD SN570               |
+| Keyboard/Touchpad| IC2 HID               |
+| Audio/3.5mm Headphone Jack| ALC289       |
+| Memory          | DDR4 3200MHz 16G       |
 
 ## Overview
 
 ### Working
 
 - CPU
-
-  - Energy management is done using [AMD Power Gadget](https://github.com/trulyspinach/SMCAMDProcessor)
-
+  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for energy management and temperature viewing
 - IGPU
-
-  - Hardware acceleration has some issues, waiting for updated driver from [NootedRed](https://github.com/NootInc/NootedRed)
-
+  - Hardware acceleration has some issues, waiting for [NootedRed](https://github.com/NootInc/NootedRed) driver update to solve
+  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to view temperature
 - WiFi/Bluetooth
-
 - Apple ID & iMessages & iCloud
-
-- Touchpad and keyboard
-
+- Interrupt mode touchpad and keyboard
 - 1440p 60hz hidpi display
-
-- 3.5mm headphone audio output
-
+- Built-in speakers and 3.5mm headphone audio output
+- All USB ports
 - NVME SSD
-
 - Metal acceleration
-
 - Brightness and volume shortcut keys
 
-### Not Working
+### Not Working&Problem
 
 - Unable to wake up after a long period of sleep
-- Internal microphone and speakers
-- 3.5mm headphone input (but Bluetooth input/output works)
+- HDMI audio output
+- Built-in microphone and 3.5mm headphone input
 - NVIDIA RTX 2060 MAX-Q
 - Third-party browsers cannot use hardware acceleration normally (Edge)
-- Keyboard backlight control, Fn shortcut keys (the driver did not work properly)
-- If you use Windows first, you must force shutdown and restart to enter Mac OS to make the sound card work in Mac OS.
+- Keyboard backlight control, Fn shortcut keys (AsusSMC driver did not work properly)
+- After using Windows, restart to macOS with no sound in headphones, force shutdown and restart into macOS normally.
 - VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
 
 ### Temperature
 
-By turning off `CPS(core performance boost)`, the temperature can be controlled within a reasonable range, but some performance will be lost. You can turn off `CPS` in BIOS using the UMAF tool, but it will affect the performance of other systems such as windows. It is recommended to turn it off using AMD Power Gadget after each boot into the system, at least for now.
+The temperature can be controlled within a reasonable range by turning off `CPS (core performance boost)`, but some performance will be lost. You can turn off `CPS` in BIOS using the UMAF tool, but it will affect the performance of other systems such as windows. It is recommended to turn it off using AMD Power Gadget after each boot into the system, at least for now.
 
 ## Know Your EFI
 
 ### ACPI
 
-| SSDT          | Function                                                     |
-| :------------ | :----------------------------------------------------------- |
-| SSDT-PLUG-ALT | Used for MacOS to recognize CPU, must-have                   |
-| SSDT-EC       | Fakes a EC for MacOS, must-have                              |
-| SSDT-HPET     | Solves IRQ conflicts, must-have                              |
-| SSDT-USBX     | USB power management, must-have                              |
-| SSDT-XOSI     | ACPI function of MAC and WIN, dual systems must-have.        |
-| SSDT-ALS0     | Provided by NootedRed, used for screen brightness adjustment |
-| SSDT-PNLF     | Provided by NootedRed, used for screen brightness adjustment |
-| SSDT-dGPU-Off | Turn off the discrete graphics card                          |
-| SSDT-RMNE     | Used in combination with the built-in Ethernet card in NullEthernet.kext to implement Apple ID login |
+SSDT | Function
+:---------|:---------
+SSDT-PLUG-ALT | Used for MacOS to recognize CPU, must-have
+SSDT-EC | Fakes an EC for MacOS, must-have
+SSDT-HPET | Solves IRQ conflicts, must-have
+SSDT-USBX | USB power management, must-have
+SSDT-XOSI | ACPI function of MAC and WIN, dual systems must-have.
+SSDT-ALS0 | Provided by NootedRed, used for screen brightness adjustment
+SSDT-PNLF | Provided by NootedRed, used for screen brightness adjustment
+SSDT-dGPU-Off | Turn off the discrete graphics card     
+SSDT-RMNE | Used in combination with the built-in Ethernet card in NullEthernet.kext to implement Apple ID login
 
 ### Kexts
 
-| Kext                       | Function                                                     |
-| :------------------------- | :----------------------------------------------------------- |
-| AMDRyzenCPUPowerManagement | AMD CPU power management                                     |
-| AppleALC                   | Audio driver                                                 |
-| AppleMCEReporterDisabler   | Disables AppleIntelMCEReporter to avoid errors on AMD CPU devices |
-| ECEnabler                  | Battery readings                                             |
-| Lilu                       | Must-have                                                    |
-| NVMeFix                    | NVMe hard disk power management                              |
-| RestrictEvents             | CPU renamer                                                  |
-| SMCAMDProcessor            | Subsidiary of AMDRyzenCPUPowerManagement                     |
-| SMCBatteryManager          | Battery management                                           |
-| SMCLightSensor             | Used for ambient light sensors on laptops                    |
-| USBToolBox                 | USB customization                                            |
-| USBMap                     | USB customization, not universal, need to customize by yourself |
-| VirtualSMC                 | Must-have                                                    |
-| NullEthernet               | Enables devices without network ports to log in to iCloud on MacOS |
-| VoodooI2C                  | Touchpad or touchscreen driver                               |
-| VoodooI2CHID               | Touchpad or touchscreen driver                               |
-| BrightnessKeys             | Brightness adjustment keys                                   |
-| HoRNDIS                    | Supports USB sharing networks for Android devices            |
-| AirportItlwm               | Intel network card driver, note that different systems have different kexts |
-| IntelBluetoothFirmware     | Bluetooth driver                                             |
-| IntelBluetoothInjector     | Bluetooth driver                                             |
-| IntelBTPatcher             | Bluetooth driver                                             |
-| AmdTscSync                 | CPU frequency synchronization, in conjunction with kernel patches, to control power consumption |
+Kext | Function
+:---------|:---------
+AirportItlwm | Intel wireless card driver, note that different systems have different kexts
+AMDRyzenCPUPowerManagement | AMD CPU power management
+AmdTscSync | CPU frequency synchronization, combined with kernel patch to control power consumption 
+AppleALC | Audio driver
+AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
+BlueToolFixup | Bluetooth repair patch, required for systems 12 and above 
+BrightnessKeys | Brightness adjustment keys 
+DirectHW | Control power consumption with Ryzenadj 
+ECEnabler | Battery reading
+FeatureUnlock | Unlock features on unsupported models 
+HoRNDIS | Support Android device USB shared network 
+IntelBTPatcher | Bluetooth driver 
+IntelBluetoothInjector | Bluetooth driver 
+IntelBluetoothFirmware | Bluetooth driver
+Lilu | Essential
+NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
+NVMeFix | NVMe hard drive power management
+RestrictEvents | CPU rename
+RadeonSensor | Get AMD graphics card temperature information 
+SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
+SMCBatteryManager | Battery management
+SMCLightSensor | For ambient light sensors on laptops 
+SMCRadeonGPU.kext | Get AMD graphics card temperature information 
+USBToolBox | USB customization
+USBMap | USB customization, not universal and needs to be customized 
+VirtualSMC | Essential
+VoodooI2C | Touchpad or touch screen driver
+VoodooI2CHID | Touchpad or touch screen driver
 
 ## Credit
 
