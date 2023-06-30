@@ -446,6 +446,8 @@
                 <dict>
                     <key>AAPL,slot-name</key>
                     <string>Slot-1</string>
+                    <key>CFG,CFG_USE_AGDC</key>
+                    <data>AA==</data>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x6)</key>
                 <dict>
@@ -2279,7 +2281,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>debug=0x44 keepsyms=1 -wegnoegpu</string>
+                    <string>debug=0x44 keepsyms=1 swd_panic=1 -wegnoegpu</string>
                     <key>prev-lang:kbd</key>
                     <data>ZW4tVVM6MA==</data>
                     <key>run-efi-updater</key>

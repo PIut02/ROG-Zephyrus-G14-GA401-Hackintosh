@@ -50,10 +50,10 @@ This English document is mostly translated by ChatGPT.
 - NVME SSD
 - Metal acceleration
 - Brightness and volume shortcut keys
+- S3 Sleep
 
 ### Not Working&Problem
 
-- Unable to wake up after a long period of sleep
 - HDMI audio output
 - Built-in microphone and 3.5mm headphone input
 - NVIDIA RTX 2060 MAX-Q
