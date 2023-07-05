@@ -52,7 +52,9 @@
 - NVME SSD
 - Metal加速
 - 亮度、声音快捷键
+  - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
 - S3睡眠
+  - 使用键盘或电源键唤醒
 
 ### 无法工作&现存问题
 

@@ -50,7 +50,9 @@ This English document is mostly translated by ChatGPT.
 - NVME SSD
 - Metal acceleration
 - Brightness and volume shortcut keys
+  - To use [ROG-HID](https://github.com/black-dragon74/ROG-HID) control, you need to disable SIP (System Integrity Protection) for this software
 - S3 Sleep
+  - Wake up using the keyboard or power button
 
 ### Not Working&Problem
 
