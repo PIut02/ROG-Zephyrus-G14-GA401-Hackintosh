@@ -12,6 +12,7 @@
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - 因NootInc驱动团队禁止分发NootedRed驱动，本EFI已移除该驱动，请前往[NootedRed](https://github.com/NootInc/NootedRed)自行下载添加
 - 本EFI以2020款制作，但应该兼容2021款
+- 更新EFI可能需要清楚NVRAM才能wan'q
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
 ## 警告
@@ -54,7 +55,7 @@
 - 亮度、声音快捷键和键盘背光控制
   - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
 - S3睡眠
-  - 使用电源键唤醒
+  - 使用电源键或笔记本开盖唤醒
 
 ### 无法工作&现存问题
 
@@ -62,7 +63,7 @@
 - 内置麦克风及3.5mm 耳机输入
 - NVIDIA RTX 2060 MAX-Q
 - 第三方浏览器无法正常使用硬件加速(Edge)
-- Fn快捷键
+- 部分Fn快捷键
 - 使用Windows后重启至macos耳机无声，强制关机重启进入macos后正常
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
 

@@ -12,6 +12,7 @@ This English document is mostly translated by ChatGPT.
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
 - Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI has removed that driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
 - This EFI was made based on the 2020 model, but it should be compatible with the 2021 model
+- To update EFI, clearing NVRAM may be necessary for the changes to take full effect.
 - **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
 
 ## Warning
@@ -52,7 +53,7 @@ This English document is mostly translated by ChatGPT.
 - Brightness/volume shortcut keys and Keyboard backlight control
   - To use [ROG-HID](https://github.com/black-dragon74/ROG-HID) control, you need to disable SIP (System Integrity Protection) for this software
 - S3 Sleep
-  - Wake up using the keyboard or power button
+  - To wake up, use the power button or open the lid of the laptop.
 
 ### Not Working&Problem
 
@@ -60,7 +61,7 @@ This English document is mostly translated by ChatGPT.
 - Built-in microphone and 3.5mm headphone input
 - NVIDIA RTX 2060 MAX-Q
 - Third-party browsers cannot use hardware acceleration normally (Edge)
-- Fn shortcut keys
+- Partial Fn shortcuts
 - After using Windows, restart to macOS with no sound in headphones, force shutdown and restart into macOS normally.
 - VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
 
