@@ -51,10 +51,10 @@
 - 所有USB接口
 - NVME SSD
 - Metal加速
-- 亮度、声音快捷键
+- 亮度、声音快捷键和键盘背光控制
   - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
 - S3睡眠
-  - 使用键盘或电源键唤醒
+  - 使用电源键唤醒
 
 ### 无法工作&现存问题
 
@@ -62,7 +62,7 @@
 - 内置麦克风及3.5mm 耳机输入
 - NVIDIA RTX 2060 MAX-Q
 - 第三方浏览器无法正常使用硬件加速(Edge)
-- 键盘背光控制、Fn快捷键(AsusSMC驱动没有正常工作)
+- Fn快捷键
 - 使用Windows后重启至macos耳机无声，强制关机重启进入macos后正常
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
 
@@ -97,7 +97,6 @@ AppleALC | 音频驱动
 AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
 BlueToolFixup | 蓝牙修复补丁，12及以上系统需要 
 BrightnessKeys | 亮度调节按键 
-DirectHW | 配合Ryzenadj控制功耗 
 ECEnabler | 电池读取
 FeatureUnlock | 在不支持的机型解锁功能 
 HoRNDIS | 支持安卓设备的USB共享网络 

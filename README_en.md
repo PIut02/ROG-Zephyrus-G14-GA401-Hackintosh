@@ -49,7 +49,7 @@ This English document is mostly translated by ChatGPT.
 - All USB ports
 - NVME SSD
 - Metal acceleration
-- Brightness and volume shortcut keys
+- Brightness/volume shortcut keys and Keyboard backlight control
   - To use [ROG-HID](https://github.com/black-dragon74/ROG-HID) control, you need to disable SIP (System Integrity Protection) for this software
 - S3 Sleep
   - Wake up using the keyboard or power button
@@ -60,7 +60,7 @@ This English document is mostly translated by ChatGPT.
 - Built-in microphone and 3.5mm headphone input
 - NVIDIA RTX 2060 MAX-Q
 - Third-party browsers cannot use hardware acceleration normally (Edge)
-- Keyboard backlight control, Fn shortcut keys (AsusSMC driver did not work properly)
+- Fn shortcut keys
 - After using Windows, restart to macOS with no sound in headphones, force shutdown and restart into macOS normally.
 - VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
 
@@ -95,7 +95,6 @@ AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
 BlueToolFixup | Bluetooth repair patch, required for systems 12 and above 
 BrightnessKeys | Brightness adjustment keys 
-DirectHW | Control power consumption with Ryzenadj 
 ECEnabler | Battery reading
 FeatureUnlock | Unlock features on unsupported models 
 HoRNDIS | Support Android device USB shared network 
