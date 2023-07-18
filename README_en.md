@@ -2,7 +2,7 @@
 
 This English document is mostly translated by ChatGPT.
 
-![1883474518](https://github.com/PIut02/ROG-Zephyrus-G14-GA401IV-Hackintosh/assets/39442130/e32b0e7d-1751-4f90-a6f4-3666a564a4e2)
+![Screenshot](https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/11d858f8-de53-4e87-a39c-329be14903ad)
 
 ## Description
 
