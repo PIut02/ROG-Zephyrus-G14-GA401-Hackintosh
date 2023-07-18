@@ -12,7 +12,7 @@
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
 - 因NootInc驱动团队禁止分发NootedRed驱动，本EFI已移除该驱动，请前往[NootedRed](https://github.com/NootInc/NootedRed)自行下载添加
 - 本EFI以2020款制作，但应该兼容2021款
-- 更新EFI可能需要清楚NVRAM才能wan'q
+- 更新EFI可能需要清除NVRAM才能完全生效
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
 ## 警告
@@ -40,22 +40,43 @@
 - CPU
 
   - 使用[AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor)进行能源管理和温度查看
+  
 - IGPU
 
   - 硬件加速存在部分问题，等待[NootedRed](https://github.com/NootInc/NootedRed)驱动更新解决
   - 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
+  
 - WIFI/蓝牙
+
 - Apple ID & iMessages & iCloud
+
 - 中断模式触摸板和键盘
+
 - 1440p 60hz hidpi显示
+
 - 内置扬声器及3.5mm 耳机声音输出
+
 - 所有USB接口
+
 - NVME SSD
+
 - Metal加速
+
 - 亮度、声音快捷键和键盘背光控制
   - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
+  
 - S3睡眠
   - 使用电源键或笔记本开盖唤醒
+  
+  - 可能需要在终端中输入：
+  
+    ```
+    sudo pmset autopoweroff 0
+    sudo pmset powernap 0
+    sudo pmset standby 0
+    sudo pmset proximitywake 0
+    sudo pmset tcpkeepalive 0
+    ```
 
 ### 无法工作&现存问题
 

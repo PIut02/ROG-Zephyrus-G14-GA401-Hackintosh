@@ -12,7 +12,7 @@ This English document is mostly translated by ChatGPT.
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
 - Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI has removed that driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
 - This EFI was made based on the 2020 model, but it should be compatible with the 2021 model
-- To update EFI, clearing NVRAM may be necessary for the changes to take full effect.
+- To update EFI, Clearn NVRAM may be necessary for the changes to take full effect.
 - **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
 
 ## Warning
@@ -39,21 +39,42 @@ This English document is mostly translated by ChatGPT.
 
 - CPU
   - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for energy management and temperature viewing
+  
 - IGPU
   - Hardware acceleration has some issues, waiting for [NootedRed](https://github.com/NootInc/NootedRed) driver update to solve
   - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to view temperature
+  
 - WiFi/Bluetooth
+
 - Apple ID & iMessages & iCloud
+
 - Interrupt mode touchpad and keyboard
+
 - 1440p 60hz hidpi display
+
 - Built-in speakers and 3.5mm headphone audio output
+
 - All USB ports
+
 - NVME SSD
+
 - Metal acceleration
+
 - Brightness/volume shortcut keys and Keyboard backlight control
   - To use [ROG-HID](https://github.com/black-dragon74/ROG-HID) control, you need to disable SIP (System Integrity Protection) for this software
+  
 - S3 Sleep
   - To wake up, use the power button or open the lid of the laptop.
+  
+  - You may need to input in the terminal:
+  
+    ```
+    sudo pmset autopoweroff 0
+    sudo pmset powernap 0
+    sudo pmset standby 0
+    sudo pmset proximitywake 0
+    sudo pmset tcpkeepalive 0
+    ```
 
 ### Not Working&Problem
 
