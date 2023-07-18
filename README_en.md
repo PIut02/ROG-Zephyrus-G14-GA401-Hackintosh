@@ -10,7 +10,7 @@ This English document is mostly translated by ChatGPT.
 - The model information has been deleted, please generate and replace it by yourself
 - OpenCore version: 0.9.2/0.9.3
 - It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
-- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI has removed that driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
+- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI does not include the driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
 - This EFI was made based on the 2020 model, but it should be compatible with the 2021 model
 - To update EFI, Clearn NVRAM may be necessary for the changes to take full effect.
 - **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
