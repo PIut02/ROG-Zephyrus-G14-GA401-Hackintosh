@@ -1,4 +1,4 @@
-# ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)
+# ROG-Zephyrus-G14-GA401-Hackintosh(2020)
 
 This English document is mostly translated by ChatGPT.
 
@@ -6,19 +6,19 @@ This English document is mostly translated by ChatGPT.
 
 ## Description
 
-- The available versions for this EFI are BigSur/Monterey/Ventura
-- The model information has been deleted, please generate and replace it by yourself
-- OpenCore version: 0.9.2/0.9.3
-- It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`
-- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI does not include the driver. Please go to [NootedRed](https://github.com/NootInc/NootedRed) to download and add it manually
-- This EFI was made based on the 2020 model, but it should be compatible with the 2021 model
+- The available versions for this EFI are BigSur/Monterey/Ventura.
+- The model information has been deleted, please generate and replace it by yourself.
+- OpenCore version: 0.9.2/0.9.4.
+- It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`.
+- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI does not include the driver. Please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add it manually.
+- This repository only supports the 2020 model.
 - To update EFI, Clearn NVRAM may be necessary for the changes to take full effect.
-- **This is my first time using Hackintosh, welcome other users to check for errors and provide help**
+- **This is my first time using Hackintosh, welcome other users to check for errors and provide help**.
 
 ## Warning
 
-- When installing or updating the system, pay attention to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck in the progress bar and cannot be installed normally
-- When installing or updating the system, please disable the `USBMap` driver in `config.plist` or customize it yourself
+- When installing or updating the system, pay attention to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck in the progress bar and cannot be installed normally.
+- When installing or updating the system, please disable the `USBMap` driver in `config.plist` or customize it yourself.
 
 ## Configuration
 
@@ -41,7 +41,7 @@ This English document is mostly translated by ChatGPT.
   - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for energy management and temperature viewing
   
 - IGPU
-  - Hardware acceleration has some issues, waiting for [NootedRed](https://github.com/NootInc/NootedRed) driver update to solve
+  - Hardware acceleration has some issues, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to solve
   - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to view temperature
   
 - WiFi/Bluetooth
@@ -53,6 +53,8 @@ This English document is mostly translated by ChatGPT.
 - 1440p 60hz hidpi display
 
 - Built-in speakers and 3.5mm headphone audio output
+
+- Built-in microphone
 
 - All USB ports
 
@@ -79,7 +81,7 @@ This English document is mostly translated by ChatGPT.
 ### Not Working&Problem
 
 - HDMI audio output
-- Built-in microphone and 3.5mm headphone input
+- 3.5mm headphone input
 - NVIDIA RTX 2060 MAX-Q
 - Third-party browsers cannot use hardware acceleration normally (Edge)
 - Partial Fn shortcuts
@@ -140,9 +142,7 @@ VoodooI2CHID | Touchpad or touch screen driver
 
 ## Credit
 
-https://github.com/NootInc/NootedRed
-
-https://github.com/NootInc/VoodooI2C
+https://github.com/ChefKissInc/NootedRed
 
 https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh
 

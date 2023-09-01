@@ -1,4 +1,4 @@
-# ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)
+# ROG-Zephyrus-G14-GA401-Hackintosh(2020)
 
 [中文](README.md)/[English](README_en.md)
 
@@ -8,10 +8,10 @@
 
 - 本EFI可用版本:BigSur/Monterey/Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本:0.9.2/0.9.3
+- OpenCore版本:0.9.2/0.9.4
 - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
-- 因NootInc驱动团队禁止分发NootedRed驱动，本EFI不包含该驱动，请前往[NootedRed](https://github.com/NootInc/NootedRed)自行下载添加
-- 本EFI以2020款制作，但应该兼容2021款
+- 因NootInc驱动团队禁止分发NootedRed驱动，本EFI不包含该驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
+- 本仓库仅兼容2020款
 - 更新EFI可能需要清除NVRAM才能完全生效
 - **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
@@ -43,7 +43,7 @@
   
 - IGPU
 
-  - 硬件加速存在部分问题，等待[NootedRed](https://github.com/NootInc/NootedRed)驱动更新解决
+  - 硬件加速存在部分问题，等待[NootedRed](https://github.com/ChefKissInc/NootedRed)驱动更新解决
   - 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
   
 - WIFI/蓝牙
@@ -55,6 +55,8 @@
 - 1440p 60hz hidpi显示
 
 - 内置扬声器及3.5mm 耳机声音输出
+
+- 内置麦克风
 
 - 所有USB接口
 
@@ -81,7 +83,7 @@
 ### 无法工作&现存问题
 
 - HDMI音频输出
-- 内置麦克风及3.5mm 耳机输入
+- 3.5mm 耳机输入
 - NVIDIA RTX 2060 MAX-Q
 - 第三方浏览器无法正常使用硬件加速(Edge)
 - 部分Fn快捷键
@@ -142,9 +144,7 @@ VoodooI2CHID | 触控板或触屏驱动
 
 ## 致谢
 
-https://github.com/NootInc/NootedRed
-
-https://github.com/NootInc/VoodooI2C
+https://github.com/ChefKissInc/NootedRed
 
 https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh
 
