@@ -1,5 +1,6 @@
 <p align="center">
- <img width="100px" src="" align="center" alt="ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)" />
+ <img width="100px" src="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/21806232-1546-4bf5-936c-5a5a34e05c76
+" align="center" alt="ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)" />
  <h2 align="center">ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)</h2>
  <p align="center">OpenCore EFI for Asus ROG-Zephyrus-G14-GA401(2020-2021) with AMD Ryzen.</p>
   <p align="center">
