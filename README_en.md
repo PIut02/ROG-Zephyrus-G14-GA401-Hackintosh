@@ -13,8 +13,6 @@
       <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
     </a>
   </p>
-
-
   <p align="center">
     <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">View Demo</a>
     ·
@@ -32,17 +30,17 @@
 
 ## Description
 
-- Available version of this EFI: Ventura
+- Available version of this repository: Ventura
 - The model information has been removed, please generate and replace it yourself
 - OpenCore version: 0.9.4
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
   - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`
-  - Turn off Secure Boot and Fast Boot
-- This EFI does not include NootedRed drivers, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add them yourself.
+  - Turn off `Secure Boot` and `Fast Boot`
+- This repository does not include NootedRed drivers, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add them yourself.
 - Updating EFI may require clearing NVRAM to take full effect.
 
-> [!Warning]\
+> [!Warning]
 > When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
 
 ## Configuration
@@ -56,7 +54,6 @@
 | SSD                  | WD SN570 SSD              |
 | Keyboard/Trackpad    | IC2 HID                   |
 | Audio/Headphone jack | ALC289/285                |
-| Memory               | DDR4 3200MHz 16G          |
 
 ## Overview
 
@@ -78,11 +75,9 @@
 
 - 1440p 60hz HiDPI display
 
-- Built-in speakers and 3.5mm headphone audio output
+- Built-in speakers and 3.5mm headphone audio output / Built-in microphone
 
-- Built-in microphone
-
-- All USB ports/NVME SSD
+- All USB ports / NVME SSD
 
 - Brightness, sound shortcut keys, and keyboard backlight control
 
@@ -106,8 +101,7 @@
 
 ### Not working and current issues
 
-- HDMI audio output
-- 3.5mm headphone input
+- HDMI audio output / 3.5mm headphone input
 - NVIDIA graphics card
 - Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve
 - Some Fn shortcut keys

@@ -13,8 +13,6 @@
       <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
     </a>
   </p>
-
-
   <p align="center">
     <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">查看Demo</a>
     ·
@@ -32,17 +30,17 @@
 
 ## 说明
 
-- 本EFI可用版本:Ventura
+- 本仓库可用版本: Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本:0.9.4
+- OpenCore版本: 0.9.4
 - BIOS设置:
   - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G
   - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启`Above 4G decoding`
-  - 关闭 Secure Boot 和 Fast Boot
-- 本EFI不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
+  - 关闭 `Secure Boot` 和 `Fast Boot`
+- 本仓库不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
 - 更新EFI可能需要清除NVRAM才能完全生效
 
-> [!Warning]\
+> [!Warning]
 > 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装。
 
 ## 配置
@@ -56,7 +54,6 @@
 | 硬盘             | WD SN570 SSD              |
 | 键盘/触摸板      | IC2 HID                   |
 | 音频/3.5耳机接口 | ALC289/285                |
-| 内存             | DDR4 3200MHz 16G          |
 
 ## 总览
 
@@ -78,11 +75,9 @@
 
 - 1440p 60hz hidpi显示
 
-- 内置扬声器及3.5mm 耳机声音输出
+- 内置扬声器及3.5mm 耳机声音输出 / 内置麦克风
 
-- 内置麦克风
-
-- 所有USB接口/NVME SSD
+- 所有USB接口 / NVME SSD
 
 - 亮度、声音快捷键和键盘背光控制
   - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
@@ -104,8 +99,7 @@
 
 ### 无法工作&现存问题
 
-- HDMI音频输出
-- 3.5mm 耳机输入
+- HDMI音频输出 / 3.5mm 耳机输入
 - NVIDIA 显卡
 - Chrome和Chromium浏览器无法正常使用硬件加速，等待[NootedRed](https://github.com/ChefKissInc/NootedRed)驱动更新解决
 - 部分Fn快捷键
