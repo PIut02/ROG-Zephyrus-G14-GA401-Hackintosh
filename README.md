@@ -1,37 +1,61 @@
-# ROG-Zephyrus-G14-GA401-Hackintosh(2020)
+<p align="center">
+ <img width="100px" src="" align="center" alt="ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)" />
+ <h2 align="center">ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)</h2>
+ <p align="center">OpenCore EFI for Asus ROG-Zephyrus-G14-GA401(2020-2021) with AMD Ryzen.</p>
+  <p align="center">
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/graphs/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh" />
+    </a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
+    </a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
+    </a>
+  </p>
 
-[中文](README.md)/[English](README_en.md)
+  <p align="center">
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">查看Demo</a>
+    ·
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">报告Bug</a>
+    ·
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">提出新特性</a>
+  </p>
+  <p align="center">
+    <a href="README.md">简体中文</a>
+    ·
+    <a href="README_en.md">English</a>
+  </p>
 
 ![Screenshot](https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/11d858f8-de53-4e87-a39c-329be14903ad)
 
 ## 说明
 
-- 本EFI可用版本:BigSur/Monterey/Ventura
+- 本EFI可用版本:Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本:0.9.2/0.9.4
-- 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G，并开启`Above 4G decoding`
-- 因NootInc驱动团队禁止分发NootedRed驱动，本EFI不包含该驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
-- 本仓库仅兼容2020款
+- OpenCore版本:0.9.4
+- BIOS设置:
+  - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G
+  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启`Above 4G decoding`
+  - 关闭 Secure Boot 和 Fast Boot
+- 本EFI不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
 - 更新EFI可能需要清除NVRAM才能完全生效
-- **这是我第一次使用Hackintosh，欢迎其他使用者检查错误并提供帮助**
 
-## 警告
-
-- 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装
-- 安装或更新系统时请在`config.plist`中禁用`USBMap`驱动或自行定制
+> [!警告]\
+> 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装。
 
 ## 配置
 
-| 部件             | 型号                  |
-| :--------------- | :-------------------- |
-| CPU              | AMD Ryzen 7 4800HS    |
-| 核显             | AMD Radeon Vega 7     |
-| 独立显卡         | NVIDIA RTX 2060 Max-Q |
-| 网卡/蓝牙        | Intel AX200           |
-| 硬盘             | WD SN570              |
-| 键盘/触摸板      | IC2 HID               |
-| 音频/3.5耳机接口 | ALC289                |
-| 内存             | DDR4 3200MHz 16G      |
+| 部件             | 型号(2020/2021)           |
+| :--------------- | :------------------------ |
+| CPU              | AMD Ryzen 7 4800HS/5800HS |
+| 核显             | AMD Radeon Vega 7/8       |
+| 独立显卡         | NVIDIA                    |
+| 网卡/蓝牙        | Intel AX200/201           |
+| 硬盘             | WD SN570 SSD              |
+| 键盘/触摸板      | IC2 HID                   |
+| 音频/3.5耳机接口 | ALC289/285                |
+| 内存             | DDR4 3200MHz 16G          |
 
 ## 总览
 
@@ -43,14 +67,13 @@
   
 - IGPU
 
-  - 硬件加速存在部分问题，等待[NootedRed](https://github.com/ChefKissInc/NootedRed)驱动更新解决
   - 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
   
 - WIFI/蓝牙
 
 - Apple ID & iMessages & iCloud
 
-- 中断模式触摸板和键盘
+- 中断模式触摸板和键盘输入
 
 - 1440p 60hz hidpi显示
 
@@ -58,16 +81,14 @@
 
 - 内置麦克风
 
-- 所有USB接口
-
-- NVME SSD
-
-- Metal加速
+- 所有USB接口/NVME SSD
 
 - 亮度、声音快捷键和键盘背光控制
   - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
   
 - S3睡眠
+  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启`S3 Sleep`
+  
   - 使用电源键或笔记本开盖唤醒
   
   - 可能需要在终端中输入：
@@ -84,8 +105,8 @@
 
 - HDMI音频输出
 - 3.5mm 耳机输入
-- NVIDIA RTX 2060 MAX-Q
-- 第三方浏览器无法正常使用硬件加速(Edge)
+- NVIDIA 显卡
+- Chrome和Chromium浏览器无法正常使用硬件加速，等待[NootedRed](https://github.com/ChefKissInc/NootedRed)驱动更新解决
 - 部分Fn快捷键
 - 使用Windows后重启至macos耳机无声，强制关机重启进入macos后正常
 - VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
@@ -125,7 +146,6 @@ ECEnabler | 电池读取
 FeatureUnlock | 在不支持的机型解锁功能 
 HoRNDIS | 支持安卓设备的USB共享网络 
 IntelBTPatcher | 蓝牙驱动 
-IntelBluetoothInjector | 蓝牙驱动 
 IntelBluetoothFirmware | 蓝牙驱动
 Lilu | 必备
 NullEthernet | 使无网口设备在MacOS可以登录iCloud

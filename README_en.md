@@ -1,75 +1,100 @@
-# ROG-Zephyrus-G14-GA401-Hackintosh(2020)
+<p align="center">
+ <img width="100px" src="" align="center" alt="ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)" />
+ <h2 align="center">ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)</h2>
+ <p align="center">OpenCore EFI for Asus ROG-Zephyrus-G14-GA401(2020-2021) with AMD Ryzen.</p>
+  <p align="center">
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/graphs/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh" />
+    </a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
+    </a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh?color=0088ff" />
+    </a>
+  </p>
 
-This English document is mostly translated by ChatGPT.
+  <p align="center">
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">View Demo</a>
+    ·
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">Request Feature</a>
+  </p>
+  <p align="center">
+    <a href="README.md">简体中文</a>
+    ·
+    <a href="README_en.md">English</a>
+  </p>
 
 ![Screenshot](https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/11d858f8-de53-4e87-a39c-329be14903ad)
 
 ## Description
 
-- The available versions for this EFI are BigSur/Monterey/Ventura.
-- The model information has been deleted, please generate and replace it by yourself.
-- OpenCore version: 0.9.2/0.9.4.
-- It is recommended to use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase vram, at least 1G is recommended 2G, and enable `Above 4G decoding`.
-- Due to the NootInc driver team's prohibition on distributing the NootedRed driver, this EFI does not include the driver. Please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add it manually.
-- This repository only supports the 2020 model.
-- To update EFI, Clearn NVRAM may be necessary for the changes to take full effect.
-- **This is my first time using Hackintosh, welcome other users to check for errors and provide help**.
+- Available version of this EFI: Ventura
+- The model information has been removed, please generate and replace it yourself
+- OpenCore version: 0.9.4
+- BIOS settings:
+  - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
+  - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`
+  - Turn off Secure Boot and Fast Boot
+- This EFI does not include NootedRed drivers, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add them yourself.
+- Updating EFI may require clearing NVRAM to take full effect.
 
-## Warning
-
-- When installing or updating the system, pay attention to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck in the progress bar and cannot be installed normally.
-- When installing or updating the system, please disable the `USBMap` driver in `config.plist` or customize it yourself.
+> [!Warning]\
+> When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
 
 ## Configuration
 
-| Component       | Model                  |
-| :-------------- | :--------------------- |
-| CPU             | AMD Ryzen 7 4800HS     |
-| Integrated Graphics| AMD Radeon Vega 7   |
-| Graphics Card   | NVIDIA RTX 2060 Max-Q  |
-| WiFi/Bluetooth  | Intel AX200            |
-| Hard Disk       | WD SN570               |
-| Keyboard/Touchpad| IC2 HID               |
-| Audio/3.5mm Headphone Jack| ALC289       |
-| Memory          | DDR4 3200MHz 16G       |
+| Component            | Model (2020/2021)         |
+| :------------------- | :------------------------ |
+| CPU                  | AMD Ryzen 7 4800HS/5800HS |
+| Integrated GPU       | AMD Radeon Vega 7/8       |
+| Dedicated GPU        | NVIDIA                    |
+| Network/Bluetooth    | Intel AX200/201           |
+| SSD                  | WD SN570 SSD              |
+| Keyboard/Trackpad    | IC2 HID                   |
+| Audio/Headphone jack | ALC289/285                |
+| Memory               | DDR4 3200MHz 16G          |
 
 ## Overview
 
 ### Working
 
 - CPU
-  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for energy management and temperature viewing
-  
+
+  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for power management and temperature monitoring
+
 - IGPU
-  - Hardware acceleration has some issues, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to solve
-  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to view temperature
-  
-- WiFi/Bluetooth
+
+  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) for temperature monitoring
+
+- WIFI/Bluetooth
 
 - Apple ID & iMessages & iCloud
 
-- Interrupt mode touchpad and keyboard
+- Interrupt mode touchpad and keyboard input
 
-- 1440p 60hz hidpi display
+- 1440p 60hz HiDPI display
 
 - Built-in speakers and 3.5mm headphone audio output
 
 - Built-in microphone
 
-- All USB ports
+- All USB ports/NVME SSD
 
-- NVME SSD
+- Brightness, sound shortcut keys, and keyboard backlight control
 
-- Metal acceleration
+  - Use [ROG-HID](https://github.com/black-dragon74/ROG-HID) to control, and to use this software, you need to turn off SIP.
 
-- Brightness/volume shortcut keys and Keyboard backlight control
-  - To use [ROG-HID](https://github.com/black-dragon74/ROG-HID) control, you need to disable SIP (System Integrity Protection) for this software
-  
 - S3 Sleep
-  - To wake up, use the power button or open the lid of the laptop.
-  
-  - You may need to input in the terminal:
-  
+
+  - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `S3 Sleep`
+
+  - Wake up using power button or opening the laptop lid
+
+  - Might need to enter the following commands in the terminal:
+
     ```
     sudo pmset autopoweroff 0
     sudo pmset powernap 0
@@ -78,19 +103,19 @@ This English document is mostly translated by ChatGPT.
     sudo pmset tcpkeepalive 0
     ```
 
-### Not Working&Problem
+### Not working and current issues
 
 - HDMI audio output
 - 3.5mm headphone input
-- NVIDIA RTX 2060 MAX-Q
-- Third-party browsers cannot use hardware acceleration normally (Edge)
-- Partial Fn shortcuts
-- After using Windows, restart to macOS with no sound in headphones, force shutdown and restart into macOS normally.
-- VCN (Video/Picture Hardware Encoding and Decoding) still has problems, can be used but not guaranteed, turned off by default, to enable, please add `-nredvcn` to `boot-args`, please move to NootedRed page for the latest progress
+- NVIDIA graphics card
+- Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve
+- Some Fn shortcut keys
+- After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
+- VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-nredvcn` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
 
 ### Temperature
 
-The temperature can be controlled within a reasonable range by turning off `CPS (core performance boost)`, but some performance will be lost. You can turn off `CPS` in BIOS using the UMAF tool, but it will affect the performance of other systems such as windows. It is recommended to turn it off using AMD Power Gadget after each boot into the system, at least for now.
+You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows, so it is recommended to use AMD Power Gadget to turn it off after each boot into the system, at least for now.
 
 ## Know Your EFI
 
