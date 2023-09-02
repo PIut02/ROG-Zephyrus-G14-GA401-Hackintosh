@@ -42,7 +42,7 @@
 - 本EFI不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
 - 更新EFI可能需要清除NVRAM才能完全生效
 
-> [!警告]\
+> [!Warning]\
 > 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装。
 
 ## 配置
