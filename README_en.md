@@ -32,7 +32,7 @@
 
 - Available version of this repository: Ventura
 - The model information has been removed, please generate and replace it yourself
-- OpenCore version: 0.9.4
+- OpenCore version: 0.9.5
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
   - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`

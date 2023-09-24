@@ -32,7 +32,7 @@
 
 - 本仓库可用版本: Ventura
 - 机型信息已删除，请自行生成更换
-- OpenCore版本: 0.9.4
+- OpenCore版本: 0.9.5
 - BIOS设置:
   - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G
   - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启 `Above 4G decoding`
