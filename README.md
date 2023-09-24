@@ -34,11 +34,11 @@
 - 机型信息已删除，请自行生成更换
 - OpenCore版本: 0.9.5
 - BIOS设置:
-  - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G
-  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启 `Above 4G decoding`
+  - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具增大显存，最少 1G 建议 2G
+  - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `Above 4G decoding`
   - 关闭 `Secure Boot` 和 `Fast Boot`
-- 本仓库不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
-- 更新EFI可能需要清除NVRAM才能完全生效
+- 本仓库不包含 NootedRed 驱动，请前往 [NootedRed](https://github.com/ChefKissInc/NootedRed) 自行下载添加
+- 更新EFI可能需要清除 NVRAM 才能完全生效
 
 > [!Warning]
 > 安装或更新系统时注意在 `config.plist` 中禁用 `NootedRed` 驱动，否则安装过程中会卡进度条无法正常安装。
@@ -99,14 +99,14 @@
 
 - HDMI音频输出 / 3.5mm 耳机输入
 - NVIDIA 显卡
-- Chrome和Chromium浏览器无法正常使用硬件加速，等待[NootedRed](https://github.com/ChefKissInc/NootedRed)驱动更新解决
+- Chrome 和 Chromium 浏览器无法正常使用硬件加速，等待 [NootedRed](https://github.com/ChefKissInc/NootedRed) 驱动更新解决
 - 部分Fn快捷键
-- 使用Windows后重启至macos耳机无声，强制关机重启进入macos后正常
-- VCN（视频/图片硬件编解码）暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至NootedRed页面查看最新进展
+- 使用 Windows 后重启至 macos 耳机无声，强制关机重启进入 macos 后正常
+- VCN(视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至 NootedRed 页面查看最新进展
 
 ### 温度
 
-可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过UMAF工具在BIOS中关闭`CPS`，但是会影响其他系统比如windows的性能，建议是每次开机进系统后通过AMD Power Gadget关闭，至少目前是只能这样。
+可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过 UMAF 工具在 BIOS 中关闭 `CPS` ，但是会影响其他系统比如 Windows 的性能，建议是每次开机进系统后通过 AMDPowerGadget 关闭，至少目前是只能这样。
 
 ## 了解你的EFI
 
