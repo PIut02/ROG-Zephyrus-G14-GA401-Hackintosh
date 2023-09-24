@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>22F82</string>
+	<string>19F101</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,19 +27,17 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string></string>
-	<key>DTPlatformName</key>
-	<string>macosx</string>
+	<string>11E801a</string>
 	<key>DTPlatformVersion</key>
-	<string>13.3</string>
+	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>22E245</string>
+	<string>19G68</string>
 	<key>DTSDKName</key>
-	<string>macosx13.3</string>
+	<string>macosx10.15</string>
 	<key>DTXcode</key>
-	<string>1431</string>
+	<string>1170</string>
 	<key>DTXcodeBuild</key>
-	<string>14E300c</string>
+	<string>11E801a</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>Custom MT2 Personality</key>
@@ -507,25 +505,6 @@
 				<string>INT33C3</string>
 				<string>INT3432</string>
 				<string>INT3433</string>
-			</array>
-			<key>IOProbeScore</key>
-			<integer>9999</integer>
-			<key>IOProviderClass</key>
-			<string>IOService</string>
-		</dict>
-		<key>VoodooI2CACPIControllerAMD</key>
-		<dict>
-			<key>AccessIntrMaskWorkaround</key>
-			<true/>
-			<key>CFBundleIdentifier</key>
-			<string>com.alexandred.VoodooI2C</string>
-			<key>IOClass</key>
-			<string>VoodooI2CACPIController</string>
-			<key>IONameMatch</key>
-			<array>
-				<string>AMD0010</string>
-				<string>AMDI0010</string>
-				<string>AMDI0510</string>
 			</array>
 			<key>IOProbeScore</key>
 			<integer>9999</integer>

@@ -35,22 +35,22 @@
 - OpenCore版本: 0.9.4
 - BIOS设置:
   - 建议使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具增大显存，最少1G建议2G
-  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启`Above 4G decoding`
+  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启 `Above 4G decoding`
   - 关闭 `Secure Boot` 和 `Fast Boot`
 - 本仓库不包含NootedRed驱动，请前往[NootedRed](https://github.com/ChefKissInc/NootedRed)自行下载添加
 - 更新EFI可能需要清除NVRAM才能完全生效
 
 > [!Warning]
-> 安装或更新系统时注意在`config.plist`中禁用`NootedRed`驱动，否则安装过程中会卡进度条无法正常安装。
+> 安装或更新系统时注意在 `config.plist` 中禁用 `NootedRed` 驱动，否则安装过程中会卡进度条无法正常安装。
 
 ## 配置
 
 | 部件             | 型号(2020/2021)           |
 | :--------------- | :------------------------ |
 | CPU              | AMD Ryzen 7 4800HS/5800HS |
-| 核显             | AMD Radeon Vega 7/8       |
+| 核显             | AMD Radeon Vega 8         |
 | 独立显卡         | NVIDIA                    |
-| 网卡/蓝牙        | Intel AX200/201           |
+| 网卡/蓝牙        | Intel AX200               |
 | 硬盘             | WD SN570 SSD              |
 | 键盘/触摸板      | IC2 HID                   |
 | 音频/3.5耳机接口 | ALC289/285                |
@@ -59,17 +59,15 @@
 
 ### 正常工作
 
-- CPU
+- CPU / IGPU
 
-  - 使用[AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor)进行能源管理和温度查看
+  - 使用 [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) 进行CPU能源管理和温度查看
   
-- IGPU
-
-  - 使用[RadeonSensor](https://github.com/NootInc/RadeonSensor)查看温度
+  - 使用 [RadeonSensor](https://github.com/NootInc/RadeonSensor) 查看GPU温度
   
-- WIFI/蓝牙
+- WIFI / 蓝牙
 
-- Apple ID & iMessages & iCloud
+- Apple ID / iMessages / iCloud
 
 - 中断模式触摸板和键盘输入
 
@@ -80,10 +78,10 @@
 - 所有USB接口 / NVME SSD
 
 - 亮度、声音快捷键和键盘背光控制
-  - 使用[ROG-HID](https://github.com/black-dragon74/ROG-HID)控制，要使用该软件需要关闭SIP
+  - 使用 [ROG-HID](https://github.com/black-dragon74/ROG-HID) 控制，要使用该软件需要关闭 `SIP`
   
 - S3睡眠
-  - 使用[UMAF](https://github.com/DavidS95/Smokeless_UMAF/)工具开启`S3 Sleep`
+  - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `S3 Sleep`
   
   - 使用电源键或笔记本开盖唤醒
   

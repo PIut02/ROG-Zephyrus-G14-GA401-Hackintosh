@@ -48,9 +48,9 @@
 | Component            | Model (2020/2021)         |
 | :------------------- | :------------------------ |
 | CPU                  | AMD Ryzen 7 4800HS/5800HS |
-| Integrated GPU       | AMD Radeon Vega 7/8       |
+| Integrated GPU       | AMD Radeon Vega 8         |
 | Dedicated GPU        | NVIDIA                    |
-| Network/Bluetooth    | Intel AX200/201           |
+| Network/Bluetooth    | Intel AX200               |
 | SSD                  | WD SN570 SSD              |
 | Keyboard/Trackpad    | IC2 HID                   |
 | Audio/Headphone jack | ALC289/285                |
@@ -59,13 +59,10 @@
 
 ### Working
 
-- CPU
+- CPU / IGPU
 
-  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for power management and temperature monitoring
-
-- IGPU
-
-  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) for temperature monitoring
+  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
+  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
 
 - WIFI/Bluetooth
 
@@ -81,7 +78,7 @@
 
 - Brightness, sound shortcut keys, and keyboard backlight control
 
-  - Use [ROG-HID](https://github.com/black-dragon74/ROG-HID) to control, and to use this software, you need to turn off SIP.
+  - Use [ROG-HID](https://github.com/black-dragon74/ROG-HID) to control, and to use this software, you need to turn off `SIP`.
 
 - S3 Sleep
 
