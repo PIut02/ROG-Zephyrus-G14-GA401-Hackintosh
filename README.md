@@ -62,32 +62,19 @@
 ### Working
 
 - CPU / IGPU
-
   - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
   - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
-
 - WIFI/Bluetooth
-
 - Apple ID & iMessages & iCloud
-
 - Interrupt mode touchpad and keyboard input
-
 - 1440p 60hz HiDPI display
-
 - Built-in speakers and 3.5mm headphone audio output / Built-in microphone
-
 - All USB ports / NVME SSD
-
 - Brightness, sound shortcut keys, and keyboard backlight control
-
   - Use [ROG-HID](https://github.com/black-dragon74/ROG-HID) to control, and to use this software, you need to turn off `SIP`.
-
 - S3 Sleep
-
   - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `S3 Sleep`
-
   - Might need to enter the following commands in the terminal:
-
     ```
     sudo pmset autopoweroff 0
     sudo pmset powernap 0

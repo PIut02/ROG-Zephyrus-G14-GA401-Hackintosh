@@ -61,31 +61,19 @@
 ### 正常工作
 
 - CPU / IGPU
-
   - 使用 [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) 进行CPU能源管理和温度查看
-  
   - 使用 [RadeonSensor](https://github.com/NootInc/RadeonSensor) 查看GPU温度
-  
 - WIFI / 蓝牙
-
 - Apple ID / iMessages / iCloud
-
 - 中断模式触摸板和键盘输入
-
 - 1440p 60hz hidpi显示
-
 - 内置扬声器及3.5mm 耳机声音输出 / 内置麦克风
-
 - 所有USB接口 / NVME SSD
-
 - 亮度、声音快捷键和键盘背光控制
   - 使用 [ROG-HID](https://github.com/black-dragon74/ROG-HID) 控制，要使用该软件需要关闭 `SIP`
-  
 - S3睡眠
   - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `S3 Sleep`
-  
   - 可能需要在终端中输入：
-  
     ```
     sudo pmset autopoweroff 0
     sudo pmset powernap 0
