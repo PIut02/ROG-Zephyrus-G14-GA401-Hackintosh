@@ -1,7 +1,7 @@
 <p align="center">
  <img width="300px" src="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/21806232-1546-4bf5-936c-5a5a34e05c76" align="center" alt="ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)" />
  <h2 align="center">ROG-Zephyrus-G14-GA401-Hackintosh(2020-2021)</h2>
- <p align="center">OpenCore EFI for Asus ROG-Zephyrus-G14-GA401(2020-2021) with AMD Ryzen.</p>
+ <p align="center">OpenCore Config for Asus ROG-Zephyrus-G14-GA401(2020-2021) with AMD Ryzen.</p>
   <p align="center">
     <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/graphs/contributors">
       <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh" />
@@ -25,6 +25,7 @@
     ·
     <a href="README.md">English</a>
   </p>
+
 
 ![Screenshot](https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/11d858f8-de53-4e87-a39c-329be14903ad)
 
@@ -119,7 +120,7 @@ SSDT-USBX | USB电源管理，必须
 SSDT-XOSI | MAC和WIN的ACPI功能，双系统必须
 SSDT-ALS0 | NootedRed提供，用于屏幕亮度调整
 SSDT-PNLF | NootedRed提供，用于屏幕亮度调整
-SSDT-dGPU-Off | 关闭独显 
+SSDT-NoHybGfx | 关闭独显 
 SSDT-RMNE | 配合NullEthernet.kext内置网卡实现Apple ID登录 
 
 ### Kexts
