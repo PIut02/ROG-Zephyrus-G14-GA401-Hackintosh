@@ -14,79 +14,79 @@
     </a>
   </p>
   <p align="center">
-    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">查看Demo</a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh">View Demo</a>
     ·
-    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">报告Bug</a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">Report Bug</a>
     ·
-    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">提出新特性</a>
+    <a href="https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/issues">Request Feature</a>
   </p>
   <p align="center">
-    <a href="README.md">简体中文</a>
+    <a href="README_cn.md">简体中文</a>
     ·
-    <a href="README_en.md">English</a>
+    <a href="README.md">English</a>
   </p>
+
 
 ![Screenshot](https://github.com/PIut02/ROG-Zephyrus-G14-GA401-Hackintosh/assets/39442130/11d858f8-de53-4e87-a39c-329be14903ad)
 
-## 说明
+## Description
 
-- 本仓库可用版本: Ventura
-- 机型信息已删除，请自行生成更换
-- OpenCore版本: 0.9.5
-- BIOS设置:
-  - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具增大显存，最少 1G 建议 2G
-  - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `Above 4G decoding`
-  - 关闭 `Secure Boot` 和 `Fast Boot`
-- 本仓库不包含 NootedRed 驱动，请前往 [NootedRed](https://github.com/ChefKissInc/NootedRed) 自行下载添加
-- 更新EFI可能需要清除 NVRAM 才能完全生效
+- Available version of this repository: Ventura / Sonoma
+- The model information has been removed, please generate and replace it yourself
+- OpenCore version: 0.9.5
+- BIOS settings:
+  - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
+  - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`
+  - Turn off `Secure Boot` and `Fast Boot`
+- This repository does not include NootedRed drivers, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add them yourself.
+- Updating EFI may require clearing NVRAM to take full effect.
 
 > [!Warning]
-> 安装或更新系统时注意在 `config.plist` 中禁用 `NootedRed` 驱动，否则安装过程中会卡进度条无法正常安装。
+> When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
 
-## 配置
+## Configuration
 
-| 部件             | 型号(2020/2021)           |
-| :--------------- | :------------------------ |
-| CPU              | AMD Ryzen 7 4800HS/5800HS |
-| 核显             | AMD Radeon Vega 8         |
-| 独立显卡         | NVIDIA                    |
-| 网卡/蓝牙        | Intel AX200               |
-| 硬盘             | WD SN570 SSD              |
-| 键盘/触摸板      | IC2 HID                   |
-| 音频/3.5耳机接口 | ALC289/285                |
+| Component            | Model (2020/2021)         |
+| :------------------- | :------------------------ |
+| CPU                  | AMD Ryzen 7 4800HS/5800HS |
+| Integrated GPU       | AMD Radeon Vega 8         |
+| Dedicated GPU        | NVIDIA                    |
+| Network/Bluetooth    | Intel AX200               |
+| SSD                  | WD SN570 SSD              |
+| Keyboard/Trackpad    | IC2 HID                   |
+| Audio/Headphone jack | ALC289/285                |
 
-## 总览
+## Overview
 
-### 正常工作
+### Working
 
 - CPU / IGPU
 
-  - 使用 [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) 进行CPU能源管理和温度查看
-  
-  - 使用 [RadeonSensor](https://github.com/NootInc/RadeonSensor) 查看GPU温度
-  
-- WIFI / 蓝牙
+  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
+  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
 
-- Apple ID / iMessages / iCloud
+- WIFI/Bluetooth
 
-- 中断模式触摸板和键盘输入
+- Apple ID & iMessages & iCloud
 
-- 1440p 60hz hidpi显示
+- Interrupt mode touchpad and keyboard input
 
-- 内置扬声器及3.5mm 耳机声音输出 / 内置麦克风
+- 1440p 60hz HiDPI display
 
-- 所有USB接口 / NVME SSD
+- Built-in speakers and 3.5mm headphone audio output / Built-in microphone
 
-- 亮度、声音快捷键和键盘背光控制
-  - 使用 [ROG-HID](https://github.com/black-dragon74/ROG-HID) 控制，要使用该软件需要关闭 `SIP`
-  
-- S3睡眠
-  - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `S3 Sleep`
-  
-  - 使用电源键或笔记本开盖唤醒
-  
-  - 可能需要在终端中输入：
-  
+- All USB ports / NVME SSD
+
+- Brightness, sound shortcut keys, and keyboard backlight control
+
+  - Use [ROG-HID](https://github.com/black-dragon74/ROG-HID) to control, and to use this software, you need to turn off `SIP`.
+
+- S3 Sleep
+
+  - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `S3 Sleep`
+
+  - Might need to enter the following commands in the terminal:
+
     ```
     sudo pmset autopoweroff 0
     sudo pmset powernap 0
@@ -95,67 +95,68 @@
     sudo pmset tcpkeepalive 0
     ```
 
-### 无法工作&现存问题
+### Not working and current issues
 
-- HDMI音频输出 / 3.5mm 耳机输入
-- NVIDIA 显卡
-- Chrome 和 Chromium 浏览器无法正常使用硬件加速，等待 [NootedRed](https://github.com/ChefKissInc/NootedRed) 驱动更新解决
-- 部分Fn快捷键
-- 使用 Windows 后重启至 macos 耳机无声，强制关机重启进入 macos 后正常
-- VCN(视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加`-nredvcn`至`boot-args`，具体请移至 NootedRed 页面查看最新进展
+- HDMI audio output / 3.5mm headphone input
+- NVIDIA graphics card
+- Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve
+- Some Fn shortcut keys
+- After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
+- VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-nredvcn` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
 
-### 温度
+### Temperature
 
-可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过 UMAF 工具在 BIOS 中关闭 `CPS` ，但是会影响其他系统比如 Windows 的性能，建议是每次开机进系统后通过 AMDPowerGadget 关闭，至少目前是只能这样。
+You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows, so it is recommended to use AMD Power Gadget to turn it off after each boot into the system, at least for now.
 
-## 了解你的EFI
+## Know Your EFI
 
 ### ACPI
 
-SSDT | 作用
+SSDT | Function
 :---------|:---------
-SSDT-PLUG-ALT | 用于MacOS识别CPU，必须
-SSDT-EC | 欺骗MacOS的假EC，必须
-SSDT-HPET | 解决IRQ冲突，必须
-SSDT-USBX | USB电源管理，必须
-SSDT-XOSI | MAC和WIN的ACPI功能，双系统必须
-SSDT-ALS0 | NootedRed提供，用于屏幕亮度调整
-SSDT-PNLF | NootedRed提供，用于屏幕亮度调整
-SSDT-dGPU-Off | 关闭独显 
-SSDT-RMNE | 配合NullEthernet.kext内置网卡实现Apple ID登录 
+SSDT-PLUG-ALT | Used for MacOS to recognize CPU, must-have
+SSDT-EC | Fakes an EC for MacOS, must-have
+SSDT-HPET | Solves IRQ conflicts, must-have
+SSDT-USBX | USB power management, must-have
+SSDT-XOSI | ACPI function of MAC and WIN, dual systems must-have.
+SSDT-ALS0 | Provided by NootedRed, used for screen brightness adjustment
+SSDT-PNLF | Provided by NootedRed, used for screen brightness adjustment
+SSDT-dGPU-Off | Turn off the discrete graphics card     
+SSDT-RMNE | Used in combination with the built-in Ethernet card in NullEthernet.kext to implement Apple ID login
 
 ### Kexts
 
-Kext | 作用
+Kext | Function
 :---------|:---------
-AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
-AMDRyzenCPUPowerManagement | AMD CPU 电源管理
-AmdTscSync | CPU频率同步，配合内核补丁控制功耗 
-AppleALC | 音频驱动
-AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
-BlueToolFixup | 蓝牙修复补丁，12及以上系统需要 
-BrightnessKeys | 亮度调节按键 
-ECEnabler | 电池读取
-FeatureUnlock | 在不支持的机型解锁功能 
-HoRNDIS | 支持安卓设备的USB共享网络 
-IntelBTPatcher | 蓝牙驱动 
-IntelBluetoothFirmware | 蓝牙驱动
-Lilu | 必备
-NullEthernet | 使无网口设备在MacOS可以登录iCloud
-NVMeFix | NVMe硬盘电源管理
-RestrictEvents | CPU改名
-RadeonSensor | 获取AMD显卡温度信息 
-SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
-SMCBatteryManager | 电池管理
-SMCLightSensor | 用于笔记本电脑上的环境光传感器 
-SMCRadeonGPU.kext | 获取AMD显卡温度信息 
-USBToolBox | USB定制
-USBMap | USB定制，不通用需要自行定制 
-VirtualSMC | 必备
-VoodooI2C | 触控板或触屏驱动
-VoodooI2CHID | 触控板或触屏驱动
+AirportItlwm | Intel wireless card driver, note that different systems have different kexts
+AMDRyzenCPUPowerManagement | AMD CPU power management
+AmdTscSync | CPU frequency synchronization, combined with kernel patch to control power consumption 
+AppleALC | Audio driver
+AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
+BlueToolFixup | Bluetooth repair patch, required for systems 12 and above 
+BrightnessKeys | Brightness adjustment keys 
+ECEnabler | Battery reading
+FeatureUnlock | Unlock features on unsupported models 
+HoRNDIS | Support Android device USB shared network 
+IntelBTPatcher | Bluetooth driver 
+IntelBluetoothInjector | Bluetooth driver 
+IntelBluetoothFirmware | Bluetooth driver
+Lilu | Essential
+NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
+NVMeFix | NVMe hard drive power management
+RestrictEvents | CPU rename
+RadeonSensor | Get AMD graphics card temperature information 
+SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
+SMCBatteryManager | Battery management
+SMCLightSensor | For ambient light sensors on laptops 
+SMCRadeonGPU.kext | Get AMD graphics card temperature information 
+USBToolBox | USB customization
+USBMap | USB customization, not universal and needs to be customized 
+VirtualSMC | Essential
+VoodooI2C | Touchpad or touch screen driver
+VoodooI2CHID | Touchpad or touch screen driver
 
-## 致谢
+## Credit
 
 https://github.com/ChefKissInc/NootedRed
 
