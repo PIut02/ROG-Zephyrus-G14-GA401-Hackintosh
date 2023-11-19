@@ -32,9 +32,9 @@
 
 ## Description
 
-- Available version of this repository: Ventura / Sonoma
+- Available version of this repository: Sonoma
 - The model information has been removed, please generate and replace it yourself
-- OpenCore version: 0.9.5
+- OpenCore version: 0.9.6
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
   - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`
@@ -62,7 +62,6 @@
 ### Working
 
 - CPU / IGPU
-  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
   - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
 - WIFI/Bluetooth
 - Apple ID & iMessages & iCloud
@@ -90,7 +89,7 @@
 - Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve
 - Some Fn shortcut keys
 - After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
-- VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-nredvcn` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
+- VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-ChefKissInternal` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
 
 ### Temperature
 
