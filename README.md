@@ -33,21 +33,14 @@
 ## Description
 
 - Available version of this repository: Sonoma
-
 - The model information has been removed, please generate and replace it yourself.
-
 - OpenCore version: 0.9.6
-
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
-  
   - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
   Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding` in the [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool by going to Device Manager > PCI Subsystem Settings.
-  
   - Turn off `Secure Boot` and `Fast Boot`
-  
 - This repository does not include `NootedRed`, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add it yourself.
-
 - Updating EFI may require clearing NVRAM to take full effect.
 
 > [!Warning]
