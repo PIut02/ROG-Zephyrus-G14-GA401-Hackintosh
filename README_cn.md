@@ -35,10 +35,11 @@
 - 机型信息已删除，请自行生成更换
 - OpenCore版本: 0.9.6
 - BIOS设置:
-  - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具增大显存，最少 1G 建议 2G
-  - 使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具开启 `Above 4G decoding`
+  - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具中增大显存：操作方法为在 Device Manager > AMD CBS > NBIO Common Options > GFX Configuration 中调整 `IGPU Configuration` 为 `UMA_SPECIFIED` ，然后调整 `UMA Frame buffer Size` 最少 1G 建议 2G
+  - 通过开启 `Above 4G decoding` 或者在 boot-args 中添加 `ncpi=0x2000` 参数来避免安装卡住
+    使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具在 Device Manager > PCI Subsystem Settings 中开启 `Above 4G decoding`
   - 关闭 `Secure Boot` 和 `Fast Boot`
-- 本仓库不包含 NootedRed 驱动，请前往 [NootedRed](https://github.com/ChefKissInc/NootedRed) 自行下载添加
+- 本仓库不包含 `NootedRed` 驱动，请前往 [NootedRed](https://github.com/ChefKissInc/NootedRed) 自行下载添加
 - 更新EFI可能需要清除 NVRAM 才能完全生效
 
 > [!Warning]
@@ -85,7 +86,7 @@
 
 - HDMI音频输出 / 3.5mm 耳机输入
 - NVIDIA 显卡
-- Chrome 和 Chromium 浏览器无法正常使用硬件加速，等待 [NootedRed](https://github.com/ChefKissInc/NootedRed) 驱动更新解决
+- Chrome 和 Chromium 浏览器无法正常使用硬件加速，等待 [NootedRed](https://github.com/ChefKissInc/NootedRed) 驱动更新解决，要正常使用这些浏览器需要关闭浏览器的硬件加速
 - 部分Fn快捷键
 - 使用 Windows 后重启至 macOS 耳机无声，强制关机重启进入 macOS 后正常
 - VCN(视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加 `-ChefKissInternal` 至 `boot-args` ，具体请移至 NootedRed 页面查看最新进展。
@@ -115,12 +116,11 @@ SSDT-RMNE | 配合NullEthernet.kext内置网卡实现Apple ID登录
 Kext | 作用
 :---------|:---------
 AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
-AMDRyzenCPUPowerManagement | AMD CPU 电源管理
-AmdTscSync | CPU频率同步，配合内核补丁控制功耗 
 AppleALC | 音频驱动
 AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
 BlueToolFixup | 蓝牙修复补丁，12及以上系统需要 
 BrightnessKeys | 亮度调节按键 
+CPUTscSync | 同步CPU的TSC(Time Stamp Counter)来避免一些问题 
 ECEnabler | 电池读取
 FeatureUnlock | 在不支持的机型解锁功能 
 HoRNDIS | 支持安卓设备的USB共享网络 
@@ -129,14 +129,14 @@ IntelBluetoothFirmware | 蓝牙驱动
 Lilu | 必备
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 NVMeFix | NVMe硬盘电源管理
-RestrictEvents | CPU改名
+RestrictEvents | 用于阻止导致不同硬件兼容性问题的不需要的进程，并解锁对仅限于其他硬件的某些功能的支持 
 RadeonSensor | 获取AMD显卡温度信息 
-SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
+SMCProcessorAMD | 使系统能读取CPU的温度和功耗 
 SMCBatteryManager | 电池管理
 SMCLightSensor | 用于笔记本电脑上的环境光传感器 
 SMCRadeonGPU.kext | 获取AMD显卡温度信息 
 USBToolBox | USB定制
-USBMap | USB定制，不通用需要自行定制 
+USBMap | USB定制 
 VirtualSMC | 必备
 VoodooI2C | 触控板或触屏驱动
 VoodooI2CHID | 触控板或触屏驱动

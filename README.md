@@ -33,13 +33,21 @@
 ## Description
 
 - Available version of this repository: Sonoma
-- The model information has been removed, please generate and replace it yourself
+
+- The model information has been removed, please generate and replace it yourself.
+
 - OpenCore version: 0.9.6
+
 - BIOS settings:
-  - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, at least 1G and recommend 2G
-  - Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding`
+  - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
+  
+  - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
+  Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding` in the [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool by going to Device Manager > PCI Subsystem Settings.
+  
   - Turn off `Secure Boot` and `Fast Boot`
-- This repository does not include NootedRed drivers, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add them yourself.
+  
+- This repository does not include `NootedRed`, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add it yourself.
+
 - Updating EFI may require clearing NVRAM to take full effect.
 
 > [!Warning]
@@ -86,7 +94,7 @@
 
 - HDMI audio output / 3.5mm headphone input
 - NVIDIA graphics card
-- Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve
+- Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve. In order to use these browsers properly, it is necessary to disable the hardware acceleration feature in the browser settings.
 - Some Fn shortcut keys
 - After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
 - VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-ChefKissInternal` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
@@ -116,29 +124,27 @@ SSDT-RMNE | Used in combination with the built-in Ethernet card in NullEthernet.
 Kext | Function
 :---------|:---------
 AirportItlwm | Intel wireless card driver, note that different systems have different kexts
-AMDRyzenCPUPowerManagement | AMD CPU power management
-AmdTscSync | CPU frequency synchronization, combined with kernel patch to control power consumption 
 AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
 BlueToolFixup | Bluetooth repair patch, required for systems 12 and above 
 BrightnessKeys | Brightness adjustment keys 
+CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter). 
 ECEnabler | Battery reading
 FeatureUnlock | Unlock features on unsupported models 
 HoRNDIS | Support Android device USB shared network 
 IntelBTPatcher | Bluetooth driver 
-IntelBluetoothInjector | Bluetooth driver 
 IntelBluetoothFirmware | Bluetooth driver
 Lilu | Essential
 NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
 NVMeFix | NVMe hard drive power management
-RestrictEvents | CPU rename
+RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware. 
 RadeonSensor | Get AMD graphics card temperature information 
-SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
+SMCProcessorAMD | Enable the system to read the temperature and power consumption of the CPU 
 SMCBatteryManager | Battery management
 SMCLightSensor | For ambient light sensors on laptops 
 SMCRadeonGPU.kext | Get AMD graphics card temperature information 
-USBToolBox | USB customization
-USBMap | USB customization, not universal and needs to be customized 
+USBToolBox | USB Map 
+USBMap | USB Map 
 VirtualSMC | Essential
 VoodooI2C | Touchpad or touch screen driver
 VoodooI2CHID | Touchpad or touch screen driver
