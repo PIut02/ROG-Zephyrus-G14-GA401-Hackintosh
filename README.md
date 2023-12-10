@@ -141,6 +141,7 @@ USBMap | USB Map
 VirtualSMC | Essential
 VoodooI2C | Touchpad or touch screen driver
 VoodooI2CHID | Touchpad or touch screen driver
+HoRNDIS | Android USB Tethering
 
 ## Credit
 

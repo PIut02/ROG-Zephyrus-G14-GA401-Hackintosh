@@ -140,6 +140,7 @@ USBMap | USB定制
 VirtualSMC | 必备
 VoodooI2C | 触控板或触屏驱动
 VoodooI2CHID | 触控板或触屏驱动
+HoRNDIS | 安卓 USB 网络共享
 
 ## 致谢
 
