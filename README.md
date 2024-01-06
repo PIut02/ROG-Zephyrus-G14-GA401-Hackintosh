@@ -34,7 +34,8 @@
 
 - Available version of this repository: Sonoma
 - The model information has been removed, please generate and replace it yourself.
-- OpenCore version: 0.9.6
+  - The machine model must be one of the following: `MacbookPro16,3`, `iMac20,1`, `iMacPro1,1`.
+- OpenCore version: 0.9.7
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
   - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
@@ -45,6 +46,8 @@
 
 > [!Warning]
 > When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
+>
+> `NootedRed` must be loaded before `BFixup.kext`, meaning the loading order should be adjusted to Lilu > NootedRed > BFixup.
 
 ## Configuration
 
@@ -87,14 +90,14 @@
 
 - HDMI audio output / 3.5mm headphone input
 - NVIDIA graphics card
-- Chrome and Chromium browsers cannot use hardware acceleration normally, waiting for [NootedRed](https://github.com/ChefKissInc/NootedRed) driver update to resolve. In order to use these browsers properly, it is necessary to disable the hardware acceleration feature in the browser settings.
 - Some Fn shortcut keys
 - After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
 - VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-ChefKissInternal` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.
 
-### Temperature
+### Tips
 
-You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows.
+- You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows.
+- The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter any problems, please disable the `BFixup.kext`.
 
 ## Know Your EFI
 
@@ -109,7 +112,7 @@ SSDT-USBX | USB power management, must-have
 SSDT-XOSI | ACPI function of MAC and WIN, dual systems must-have.
 SSDT-ALS0 | Provided by NootedRed, used for screen brightness adjustment
 SSDT-PNLF | Provided by NootedRed, used for screen brightness adjustment
-SSDT-NoHybGfx | Turn off the discrete graphics card     
+SSDT-NoHybGfx | Turn off the discrete graphics card
 SSDT-RMNE | Used in combination with the built-in Ethernet card in NullEthernet.kext to implement Apple ID login
 
 ### Kexts
@@ -117,38 +120,37 @@ SSDT-RMNE | Used in combination with the built-in Ethernet card in NullEthernet.
 Kext | Function
 :---------|:---------
 AirportItlwm | Intel wireless card driver, note that different systems have different kexts
+AMDRyzenCPUPowerManagement | AMD CPU power management
 AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
-BlueToolFixup | Bluetooth repair patch, required for systems 12 and above 
-BrightnessKeys | Brightness adjustment keys 
-CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter). 
+BFixup | Downgrading the OpenGL version.
+BlueToolFixup | Bluetooth repair patch
+BrightnessKeys | Brightness adjustment keys
+CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter).
 ECEnabler | Battery reading
-FeatureUnlock | Unlock features on unsupported models 
-HoRNDIS | Support Android device USB shared network 
-IntelBTPatcher | Bluetooth driver 
+FeatureUnlock | Unlock features on unsupported models
+HoRNDIS | Support Android device USB shared network
+IntelBTPatcher | Bluetooth driver
 IntelBluetoothFirmware | Bluetooth driver
 Lilu | Essential
 NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
 NVMeFix | NVMe hard drive power management
-RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware. 
-RadeonSensor | Get AMD graphics card temperature information 
-SMCProcessorAMD | Enable the system to read the temperature and power consumption of the CPU 
+RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware
+RadeonSensor | Get AMD graphics card temperature information
+SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
+SMCProcessorAMD | Enable the system to read the temperature and power consumption of the CPU
 SMCBatteryManager | Battery management
-SMCLightSensor | For ambient light sensors on laptops 
-SMCRadeonGPU.kext | Get AMD graphics card temperature information 
-USBToolBox | USB Map 
-USBMap | USB Map 
+SMCLightSensor | For ambient light sensors on laptops
+SMCRadeonGPU.kext | Get AMD graphics card temperature information
+USBToolBox | USB Map
+USBMap | USB Map
 VirtualSMC | Essential
 VoodooI2C | Touchpad or touch screen driver
 VoodooI2CHID | Touchpad or touch screen driver
-HoRNDIS | Android USB Tethering
 
 ## Credit
 
-https://github.com/ChefKissInc/NootedRed
-
-https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh
-
-https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI
-
-https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh
+- [Apple](https://www.apple.com) for macOS.
+- [ChefKissInc](https://github.com/ChefKissInc/) for [NootedRed](https://github.com/ChefKissInc/NootedRed) and VoodooI2C, their hard work has made this project possible.
+- [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh),[AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI),[b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) for let me to know this work is possible.
+- [DavidS95](https://github.com/DavidS95/) for [UMAF](https://github.com/DavidS95/Smokeless_UMAF/), allow me to conveniently modify the hidden BIOS settings.
