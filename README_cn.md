@@ -96,7 +96,7 @@
 
 ### 提示
 
-- 可以通过关闭 `CPS(core performence boost)` 将温度控制在比较合适的范围，但是会损失一部分性能。可以通过 UMAF 工具在 BIOS 中关闭 `CPS` ，但是会影响其他系统比如 Windows 的性能.
+- 可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过 UMAF 工具在 BIOS 中关闭 `CPS` ，但是会影响其他系统比如 Windows 的性能，建议是每次开机进系统后通过 AMDPowerGadget 关闭，至少目前是只能这样。
 - `BFixup.kext` 通过降级了 OpenGL 版本来避免让系统冻结，一些应用因此得以正常工作，例如 Chrome ，但同时也会使得部分应用无法工作，如果你遇到问题禁用 `BFixup.kext`.
 
 ## 了解你的EFI
@@ -152,5 +152,5 @@ VoodooI2CHID | 触控板或触屏驱动
 
 - [Apple](https://www.apple.com) 设计的 macOS 操作系统.
 - [ChefKissInc](https://github.com/ChefKissInc/) 编写的 [NootedRed](https://github.com/ChefKissInc/NootedRed) 和 VoodooI2C ，他们的辛勤工作让这个项目成为可能.
-- [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh),[AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI),[b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) 让我知道这个项目有可能实现.
+- [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh), [AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI), [b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) 让我知道这个项目有可能实现.
 - [DavidS95](https://github.com/DavidS95/) 编写的 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/)，让我能方便的修改隐藏的BIOS设置.

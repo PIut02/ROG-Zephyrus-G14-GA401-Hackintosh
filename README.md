@@ -97,7 +97,7 @@
 
 ### Tips
 
-- You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows.
+- You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows, so it is recommended to use AMD Power Gadget to turn it off after each boot into the system, at least for now.
 - The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter any problems, please disable the `BFixup.kext`.
 
 ## Know Your EFI
@@ -153,5 +153,5 @@ VoodooI2CHID | Touchpad or touch screen driver
 
 - [Apple](https://www.apple.com) for macOS.
 - [ChefKissInc](https://github.com/ChefKissInc/) for [NootedRed](https://github.com/ChefKissInc/NootedRed) and VoodooI2C, their hard work has made this project possible.
-- [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh),[AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI),[b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) for let me to know this work is possible.
+- [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh), [AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI), [b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) for let me to know this work is possible.
 - [DavidS95](https://github.com/DavidS95/) for [UMAF](https://github.com/DavidS95/Smokeless_UMAF/), allow me to conveniently modify the hidden BIOS settings.
