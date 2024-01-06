@@ -65,6 +65,7 @@
 ### 正常工作
 
 - CPU / IGPU
+  - 使用 [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) 进行CPU能源管理和温度查看
   - 使用 [RadeonSensor](https://github.com/NootInc/RadeonSensor) 查看GPU温度
 - WIFI / 蓝牙
 - Apple ID / iMessages / iCloud

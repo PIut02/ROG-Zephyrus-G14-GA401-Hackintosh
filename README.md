@@ -66,6 +66,7 @@
 ### Working
 
 - CPU / IGPU
+  - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
   - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
 - WIFI/Bluetooth
 - Apple ID & iMessages & iCloud
