@@ -47,7 +47,7 @@
 > [!Warning]
 > When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
 >
-> `NootedRed` must be loaded before `BFixup.kext`, meaning the loading order should be adjusted to Lilu > NootedRed > BFixup.
+> `BFixup.kext` must be loaded before `NootedRed`, meaning the loading order should be adjusted to Lilu > BFixup > NootedRed.
 
 ## Configuration
 
