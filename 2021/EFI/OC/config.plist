@@ -456,13 +456,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>BFixup.kext</string>
+                    <string>NootedRed.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.1</string>
+                    <string>V1.0.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BFixup</string>
+                    <string>Contents/MacOS/NootedRed</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -494,7 +494,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.8 | AppleALC.kext</string>
+                    <string>V1.8.9 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -607,24 +607,6 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/SMCAMDProcessor</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>SMCProcessorAMD.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.1</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCProcessorAMD</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -818,7 +800,7 @@
                     <key>BundlePath</key>
                     <string>IntelBluetoothFirmware.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0</string>
+                    <string>V2.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -836,7 +818,7 @@
                     <key>BundlePath</key>
                     <string>IntelBTPatcher.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0</string>
+                    <string>V2.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -2231,7 +2213,7 @@
                     <key>revcpu</key>
                     <integer>1</integer>
                     <key>revcpuname</key>
-                    <string>AMD Ryzen™ 7 5800HS with Radeon Graphics</string>
+                    <string>AMD Ryzen™ 7 5800HS</string>
                     <key>rtc-blacklist</key>
                     <data></data>
                 </dict>

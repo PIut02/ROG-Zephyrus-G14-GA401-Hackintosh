@@ -34,14 +34,13 @@
 
 - Available version of this repository: Sonoma
 - The model information has been removed, please generate and replace it yourself.
-  - The machine model must be one of the following: `MacbookPro16,3`, `iMac20,1`, `iMacPro1,1`.
-- OpenCore version: 0.9.7
+  - The SystemProductName must be one of the following: `MacbookPro16,3`, `iMac20,1`, `iMacPro1,1`.
+- OpenCore version: 0.9.8
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
   - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
   Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding` in the [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool by going to Device Manager > PCI Subsystem Settings.
   - Turn off `Secure Boot` and `Fast Boot`
-- This repository does not include `NootedRed`, please go to [NootedRed](https://github.com/ChefKissInc/NootedRed) to download and add it yourself.
 - Updating EFI may require clearing NVRAM to take full effect.
 
 > [!Warning]
@@ -97,8 +96,8 @@
 
 ### Tips
 
-- You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. You can use the UMAF tool to turn off `CPS` in the BIOS, but it will affect the performance of other systems such as Windows, so it is recommended to use AMD Power Gadget to turn it off after each boot into the system, at least for now.
-- The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter any problems, please disable the `BFixup.kext`.
+- You can control the temperature within a suitable range by turning off `CPS (core performance boost)`, but this will lose some performance. For improved temperature control and battery life, the SMCAMDProcessor modified by @htmambo now disables `CPS` by default. Enable it manually for better performance.
+- The NootedRed modified by @htmambo includes the patch from `BFixup.kext`. This patch downgrades the OpenGL version to prevent system freezes, enabling some applications like Chrome to work properly. However, it may cause issues with other applications. If you encounter problems, switch to the [official repository](https://github.com/ChefKissInc/NootedRed) instead of the forked one.
 
 ## Know Your EFI
 
@@ -124,7 +123,6 @@ AirportItlwm | Intel wireless card driver, note that different systems have diff
 AMDRyzenCPUPowerManagement | AMD CPU power management
 AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
-BFixup | Downgrading the OpenGL version.
 BlueToolFixup | Bluetooth repair patch
 BrightnessKeys | Brightness adjustment keys
 CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter).
@@ -139,7 +137,6 @@ NVMeFix | NVMe hard drive power management
 RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware
 RadeonSensor | Get AMD graphics card temperature information
 SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
-SMCProcessorAMD | Enable the system to read the temperature and power consumption of the CPU
 SMCBatteryManager | Battery management
 SMCLightSensor | For ambient light sensors on laptops
 SMCRadeonGPU.kext | Get AMD graphics card temperature information
@@ -155,3 +152,4 @@ VoodooI2CHID | Touchpad or touch screen driver
 - [ChefKissInc](https://github.com/ChefKissInc/) for [NootedRed](https://github.com/ChefKissInc/NootedRed) and VoodooI2C, their hard work has made this project possible.
 - [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh), [AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI), [b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) for let me to know this work is possible.
 - [DavidS95](https://github.com/DavidS95/) for [UMAF](https://github.com/DavidS95/Smokeless_UMAF/), allow me to conveniently modify the hidden BIOS settings.
+- [htmambo](https://github.com/htmambo) for the modified [NootedRed](https://github.com/htmambo/NootedRed) and [SMCAMDProcessor](https://github.com/htmambo/SMCAMDProcessor).

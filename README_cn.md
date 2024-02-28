@@ -34,13 +34,12 @@
 - 本仓库可用版本: Sonoma
 - 机型信息已删除，请自行生成更换
   - 机型必须使用 `MacbookPro16,3`,`iMac20,1`,`iMacPro1,1`.
-- OpenCore版本: 0.9.7
+- OpenCore版本: 0.9.8
 - BIOS设置:
   - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具中增大显存：操作方法为在 Device Manager > AMD CBS > NBIO Common Options > GFX Configuration 中调整 `IGPU Configuration` 为 `UMA_SPECIFIED` ，然后调整 `UMA Frame buffer Size` 最少 1G 建议 2G
   - 通过开启 `Above 4G decoding` 或者在 boot-args 中添加 `ncpi=0x2000` 参数来避免安装卡住
     使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具在 Device Manager > PCI Subsystem Settings 中开启 `Above 4G decoding`
   - 关闭 `Secure Boot` 和 `Fast Boot`
-- 本仓库不包含 `NootedRed` 驱动，请前往 [NootedRed](https://github.com/ChefKissInc/NootedRed) 自行下载添加
 - 更新EFI可能需要清除 NVRAM 才能完全生效
 
 > [!Warning]
@@ -90,14 +89,14 @@
 
 - HDMI音频输出 / 3.5mm 耳机输入
 - NVIDIA 显卡
-- 部分Fn快捷键
+- 部分 Fn 快捷键
 - 使用 Windows 后重启至 macOS 耳机无声，强制关机重启进入 macOS 后正常.
-- VCN(视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加 `-ChefKissInternal` 至 `boot-args` ，具体请移至 NootedRed 页面查看最新进展.
+- VCN (视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加 `-ChefKissInternal` 至 `boot-args` ，具体请移至 NootedRed 页面查看最新进展.
 
 ### 提示
 
-- 可以通过关闭`CPS(core performence boost)`将温度控制在比较合适的范围，但是会损失一部分性能。可以通过 UMAF 工具在 BIOS 中关闭 `CPS` ，但是会影响其他系统比如 Windows 的性能，建议是每次开机进系统后通过 AMDPowerGadget 关闭，至少目前是只能这样。
-- `BFixup.kext` 通过降级了 OpenGL 版本来避免让系统冻结，一些应用因此得以正常工作，例如 Chrome ，但同时也会使得部分应用无法工作，如果你遇到问题禁用 `BFixup.kext`.
+- 可以通过关闭 `CPS(core performence boost)` 将温度控制在比较合适的范围，但是会损失一部分性能. 为获得更好的温度控制和续航表现，现在使用 @htmambo 修改的 SMCAMDProcessor，默认关闭 `CPS`，如果想拥有更好的性能表现请手动开启.
+- @htmambo 修改的NootedRed合并了 `BFixup.kext` 的补丁. `BFixup.kext` 通过降级了 OpenGL 版本来避免让系统冻结，一些应用因此得以正常工作，例如 Chrome ，但同时也会使得部分应用无法工作，如果你遇到问题更换使用官方仓库而不是复刻仓库.
 
 ## 了解你的EFI
 
@@ -123,7 +122,6 @@ AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
 AMDRyzenCPUPowerManagement | AMD CPU 电源管理
 AppleALC | 音频驱动
 AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
-BFixup | 降级OpenGL版本 
 BlueToolFixup | 蓝牙修复补丁 
 BrightnessKeys | 亮度调节按键
 CPUTscSync | 同步CPU的TSC(Time Stamp Counter)来避免一些问题
@@ -138,7 +136,6 @@ NVMeFix | NVMe硬盘电源管理
 RestrictEvents | 用于阻止导致不同硬件兼容性问题的不需要的进程，并解锁对仅限于其他硬件的某些功能的支持
 RadeonSensor | 获取AMD显卡温度信息
 SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
-SMCProcessorAMD | 使系统能读取CPU的温度和功耗
 SMCBatteryManager | 电池管理
 SMCLightSensor | 用于笔记本电脑上的环境光传感器
 SMCRadeonGPU.kext | 获取AMD显卡温度信息
@@ -154,3 +151,4 @@ VoodooI2CHID | 触控板或触屏驱动
 - [ChefKissInc](https://github.com/ChefKissInc/) 编写的 [NootedRed](https://github.com/ChefKissInc/NootedRed) 和 VoodooI2C ，他们的辛勤工作让这个项目成为可能.
 - [zabdottler](https://github.com/zabdottler/Lenovo-Yoga-16S-hackintosh), [AlphaNecron](https://github.com/AlphaNecron/Zephyrus-G14-GA401QH-EFI), [b00t0x](https://github.com/b00t0x/ROG-Zephyrus-G14-GA402-Hackintosh) 让我知道这个项目有可能实现.
 - [DavidS95](https://github.com/DavidS95/) 编写的 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/)，让我能方便的修改隐藏的BIOS设置.
+- [htmambo](https://github.com/htmambo) 修改的 [NootedRed](https://github.com/htmambo/NootedRed) 和 [SMCAMDProcessor](https://github.com/htmambo/SMCAMDProcessor).
