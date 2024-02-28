@@ -44,8 +44,6 @@
 
 > [!Warning]
 > 安装或更新系统时注意在 `config.plist` 中禁用 `NootedRed` 驱动，否则安装过程中会卡进度条无法正常安装。
->
-> `BFixup.kext` 必须加载在 `NootedRed` 之前，也就是加载顺序需调整为 Lilu > BFixup > NootedRed.
 
 ## 配置
 
