@@ -323,9 +323,17 @@
             <array>
                 <dict>
                     <key>Address</key>
+                    <integer>4026531840</integer>
+                    <key>Comment</key>
+                    <string>MMIO devirt 0xF0000000 (0x8000 pages, 0x800000000000100D)</string>
+                    <key>Enabled</key>
+                    <true/>
+                </dict>
+                <dict>
+                    <key>Address</key>
                     <integer>4244635648</integer>
                     <key>Comment</key>
-                    <string></string>
+                    <string>MMIO devirt 0xFD000000 (0x1E00 pages, 0x800000000000100D)</string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
@@ -333,7 +341,7 @@
                     <key>Address</key>
                     <integer>4276092928</integer>
                     <key>Comment</key>
-                    <string></string>
+                    <string>MMIO devirt 0xFEE00000 (0x1 pages, 0x8000000000000001)</string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
@@ -341,23 +349,15 @@
                     <key>Address</key>
                     <integer>4276097024</integer>
                     <key>Comment</key>
-                    <string></string>
+                    <string>MMIO devirt 0xFEE01000 (0x11FF pages, 0x800000000000100D)</string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
                 <dict>
                     <key>Address</key>
-                    <integer>3758096384</integer>
+                    <integer>17448304640</integer>
                     <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                </dict>
-                <dict>
-                    <key>Address</key>
-                    <integer>18253611008</integer>
-                    <key>Comment</key>
-                    <string></string>
+                    <string>MMIO devirt 0x410000000 (0x20200 pages, 0x800000000000100D)</string>
                     <key>Enabled</key>
                     <false/>
                 </dict>
@@ -486,6 +486,24 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/VirtualSMC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>BFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BFixup</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1828,7 +1846,7 @@
                 <key>LauncherPath</key>
                 <string>Default</string>
                 <key>PickerAttributes</key>
-                <integer>17</integer>
+                <integer>145</integer>
                 <key>PickerAudioAssist</key>
                 <false/>
                 <key>PickerMode</key>
@@ -1849,7 +1867,7 @@
                 <key>AppleDebug</key>
                 <false/>
                 <key>ApplePanic</key>
-                <true/>
+                <false/>
                 <key>DisableWatchDog</key>
                 <false/>
                 <key>DisplayDelay</key>
@@ -1890,7 +1908,7 @@
                 <key>ScanPolicy</key>
                 <integer>0</integer>
                 <key>SecureBootModel</key>
-                <string>Default</string>
+                <string>Disabled</string>
                 <key>Vault</key>
                 <string>Optional</string>
             </dict>
@@ -2443,13 +2461,13 @@
                     <key>Arguments</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>HfsPlus.efi</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>LoadEarly</key>
                     <false/>
                     <key>Path</key>
-                    <string>HfsPlus.efi</string>
+                    <string>OpenHfsPlus.efi</string>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -2467,7 +2485,7 @@
                     <key>Arguments</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>OpenRuntime.efi</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>LoadEarly</key>
@@ -2479,7 +2497,19 @@
                     <key>Arguments</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>ResetNvramEntry.efi</string>
+                    <string></string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>LoadEarly</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>AudioDxe.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>LoadEarly</key>
@@ -2491,7 +2521,7 @@
                     <key>Arguments</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>ToggleSipEntry.efi</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>LoadEarly</key>

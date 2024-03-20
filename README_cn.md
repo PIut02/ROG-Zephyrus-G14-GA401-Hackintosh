@@ -34,7 +34,7 @@
 - 本仓库可用版本: Sonoma
 - 机型信息已删除，请自行生成更换
   - 机型必须使用 `MacbookPro16,3`,`iMac20,1`,`iMacPro1,1`.
-- OpenCore版本: 0.9.8
+- OpenCore版本: 0.9.9
 - BIOS设置:
   - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具中增大显存：操作方法为在 Device Manager > AMD CBS > NBIO Common Options > GFX Configuration 中调整 `IGPU Configuration` 为 `UMA_SPECIFIED` ，然后调整 `UMA Frame buffer Size` 最少 1G 建议 2G
   - 通过开启 `Above 4G decoding` 或者在 boot-args 中添加 `ncpi=0x2000` 参数来避免安装卡住
@@ -44,6 +44,8 @@
 
 > [!Warning]
 > 安装或更新系统时注意在 `config.plist` 中禁用 `NootedRed` 驱动，否则安装过程中会卡进度条无法正常安装。
+>
+> `BFixup.kext` 必须加载在 `NootedRed` 之前，也就是加载顺序需调整为 Lilu > BFixup > NootedRed.
 
 ## 配置
 
@@ -89,12 +91,17 @@
 - NVIDIA 显卡
 - 部分 Fn 快捷键
 - 使用 Windows 后重启至 macOS 耳机无声，强制关机重启进入 macOS 后正常.
-- VCN (视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加 `-ChefKissInternal` 至 `boot-args` ，具体请移至 NootedRed 页面查看最新进展.
+- ~~VCN (视频/图片硬件编解码)暂时还有问题，能使用但不确保问题，默认关闭，开启请添加 `-ChefKissInternal` 至 `boot-args` ，具体请移至 NootedRed 页面查看最新进展.~~ (最新仓库已经移除这些代码)
 
 ### 提示
 
-- 可以通过关闭 `CPS(core performence boost)` 将温度控制在比较合适的范围，但是会损失一部分性能. 为获得更好的温度控制和续航表现，现在使用 @htmambo 修改的 SMCAMDProcessor，默认关闭 `CPS`，如果想拥有更好的性能表现请手动开启.
-- @htmambo 修改的NootedRed合并了 `BFixup.kext` 的补丁. `BFixup.kext` 通过降级了 OpenGL 版本来避免让系统冻结，一些应用因此得以正常工作，例如 Chrome ，但同时也会使得部分应用无法工作，如果你遇到问题更换使用官方仓库而不是复刻仓库.
+- 可以通过关闭 `CPS(core performence boost)` 将温度控制在比较合适的范围，但是会损失一部分性能. 为获得更好的温度控制和续航表现，现在使用 @htmambo 修改的 SMCAMDProcessor，默认关闭 `CPS`，如果想拥有更好的性能表现请手动开启. 你可以在OC\Kexts\AMDRyzenCPUPowerManagement.kext\Contents\Info.plist中自定义CPS的开启状态和设定默认频率值，参考如下表：
+  | 属性      | 默认（0：关闭，1：启用） | 备注                                                         |
+  | --------- | ------------------------ | ------------------------------------------------------------ |
+  | CPBStatus | 0                        | CPB状态                                                      |
+  | SpeedID   | 0                        | 频率表中的ID值，具体代表的频率请自行打开`AMD Power Gadget.app`后在选项的`Speed`->`Advanced Options`中查询 |
+
+- `BFixup.kext` 通过降级了 OpenGL 版本来避免让系统冻结，一些应用因此得以正常工作，例如 Chrome ，但同时也会使得部分应用无法工作，如果你遇到问题禁用 `BFixup.kext`.
 
 ## 了解你的EFI
 
@@ -120,6 +127,7 @@ AirportItlwm | 英特尔网卡驱动，注意不同的系统有不同的kext
 AMDRyzenCPUPowerManagement | AMD CPU 电源管理
 AppleALC | 音频驱动
 AppleMCEReporterDisabler | 关闭AppleIntelMCEReporter，避免在AMD CPU的设备上报错
+BFixup | 降级OpenGL版本 
 BlueToolFixup | 蓝牙修复补丁 
 BrightnessKeys | 亮度调节按键
 CPUTscSync | 同步CPU的TSC(Time Stamp Counter)来避免一些问题

@@ -46,6 +46,8 @@
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>wtf.spinach.AMDRyzenCPUPowerManagement</string>
+			<key>CPBStatus</key>
+			<integer>0</integer>
 			<key>IOClass</key>
 			<string>AMDRyzenCPUPowerManagement</string>
 			<key>IOMatchCategory</key>
@@ -63,6 +65,8 @@
 			<string>ACPI</string>
 			<key>IOUserClientClass</key>
 			<string>AMDRyzenCPUPMUserClient</string>
+			<key>SpeedID</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
