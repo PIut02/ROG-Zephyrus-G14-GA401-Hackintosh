@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21H1015</string>
+	<string>21H1123</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -207,17 +207,9 @@
 			<dict>
 				<key>DalForceSingleDispPipeSplit</key>
 				<integer>1</integer>
-				<key>PP_DisableVoltageIsland</key>
-				<integer>1</integer>
-				<key>PP_DriverEnableNBDPM</key>
-				<integer>1</integer>
 				<key>PP_GPUPowerDownEnabled</key>
 				<integer>0</integer>
 				<key>PP_GfxOffControl</key>
-				<integer>1</integer>
-				<key>PP_SclkDeepSleepDisable</key>
-				<integer>0</integer>
-				<key>PP_ThermalAutoThrottlingEnable</key>
 				<integer>1</integer>
 				<key>PP_ToolsLogSpaceSize</key>
 				<integer>524288</integer>
@@ -242,7 +234,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>10.15</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2022-2023 ChefKiss Inc. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
+	<string>Copyright © 2022-2024 ChefKiss Inc. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0</string>
 	<key>OSBundleLibraries</key>

@@ -323,17 +323,9 @@
             <array>
                 <dict>
                     <key>Address</key>
-                    <integer>4026531840</integer>
-                    <key>Comment</key>
-                    <string>MMIO devirt 0xF0000000 (0x8000 pages, 0x800000000000100D)</string>
-                    <key>Enabled</key>
-                    <true/>
-                </dict>
-                <dict>
-                    <key>Address</key>
                     <integer>4244635648</integer>
                     <key>Comment</key>
-                    <string>MMIO devirt 0xFD000000 (0x1E00 pages, 0x800000000000100D)</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
@@ -341,7 +333,7 @@
                     <key>Address</key>
                     <integer>4276092928</integer>
                     <key>Comment</key>
-                    <string>MMIO devirt 0xFEE00000 (0x1 pages, 0x8000000000000001)</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
@@ -349,15 +341,23 @@
                     <key>Address</key>
                     <integer>4276097024</integer>
                     <key>Comment</key>
-                    <string>MMIO devirt 0xFEE01000 (0x11FF pages, 0x800000000000100D)</string>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                 </dict>
                 <dict>
                     <key>Address</key>
-                    <integer>17448304640</integer>
+                    <integer>3758096384</integer>
                     <key>Comment</key>
-                    <string>MMIO devirt 0x410000000 (0x20200 pages, 0x800000000000100D)</string>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                </dict>
+                <dict>
+                    <key>Address</key>
+                    <integer>18253611008</integer>
+                    <key>Comment</key>
+                    <string></string>
                     <key>Enabled</key>
                     <false/>
                 </dict>
@@ -497,24 +497,6 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>BFixup.kext</string>
-                    <key>Comment</key>
-                    <string>V1.0.1</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/BFixup</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>NootedRed.kext</string>
                     <key>Comment</key>
                     <string>V1.0.0</string>
@@ -533,27 +515,9 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>RadeonSensor.kext</string>
-                    <key>Comment</key>
-                    <string>V1.3.0</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/RadeonSensor</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.9 | AppleALC.kext</string>
+                    <string>V1.9.0 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -677,13 +641,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>SMCBatteryManager.kext</string>
+                    <string>SMCRadeonSensors.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMCBatteryManager.kext</string>
+                    <string>V2.0.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCBatteryManager</string>
+                    <string>Contents/MacOS/SMCRadeonSensors</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -695,13 +659,13 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>SMCRadeonGPU.kext</string>
+                    <string>SMCBatteryManager.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.0</string>
+                    <string>V1.3.2 | SMCBatteryManager.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
-                    <string>Contents/MacOS/SMCRadeonGPU</string>
+                    <string>Contents/MacOS/SMCBatteryManager</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -785,25 +749,7 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>USBToolBox.kext</string>
-                    <key>Comment</key>
-                    <string>V1.1.1</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/USBToolBox</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>BundlePath</key>
-                    <string>UTBMap.kext</string>
+                    <string>USBMap.kext</string>
                     <key>Comment</key>
                     <string>V1.1</string>
                     <key>Enabled</key>
@@ -1008,6 +954,24 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/HoRNDIS</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>AMFIPass.kext</string>
+                    <key>Comment</key>
+                    <string>V1.4.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AMFIPass</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -2285,7 +2249,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>keepsyms=1 swd_panic=1 amfi_get_out_of_my_way=1 ipc_control_port_options=0 revpatch=auto,sbvmm</string>
+                    <string>keepsyms=1 swd_panic=1 revpatch=auto,sbvmm</string>
                     <key>prev-lang:kbd</key>
                     <data>ZW4tVVM6MA==</data>
                     <key>run-efi-updater</key>

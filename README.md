@@ -32,10 +32,10 @@
 
 ## Description
 
-- Available version of this repository: Sonoma
+- Available version of this repository: Sonoma 14.4 or above.
 - The model information has been removed, please generate and replace it yourself.
   - The SystemProductName must be one of the following: `MacbookPro16,3`, `iMac20,1`, `iMacPro1,1`.
-- OpenCore version: 0.9.9
+- OpenCore version: 1.0.0.
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
   - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
@@ -46,7 +46,6 @@
 > [!Warning]
 > When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
 >
-> `BFixup.kext` must be loaded before `NootedRed`, meaning the loading order should be adjusted to Lilu > BFixup > NootedRed.
 
 ## Configuration
 
@@ -92,7 +91,7 @@
 - NVIDIA graphics card
 - Some Fn shortcut keys
 - After using Windows and restarting to macOS, there is no sound from the headphones. A forced shutdown and reboot will make it work normally again.
-- ~~VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-ChefKissInternal` to `boot-args`. For details, please go to the NootedRed page to see the latest progress.~~(The latest repository has already removed these codes.)
+- VCN (video/image hardware encoding/decoding) still has some problems, can be used but not guaranteed, turned off by default, to turn on, please add `-ChefKissInternal` to `boot-args`. 
 
 ### Tips
 
@@ -103,7 +102,7 @@
   | CPBStatus | 0                                 | CPB status                                                   |
   | SpeedID   | 0                                 | ID value in the frequency table; check the specific frequency by opening `AMD Power Gadget.app` and navigating to `Speed`->`Advanced Options` |
 
-- The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter any problems, please disable the `BFixup.kext`.
+- The NootedRed modified by @htmambo includes the patch from `BFixup.kext`. The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter problems, switch to the [official repository](https://github.com/ChefKissInc/NootedRed) instead of the forked one.
 
 ## Know Your EFI
 
@@ -127,9 +126,9 @@ Kext | Function
 :---------|:---------
 AirportItlwm | Intel wireless card driver, note that different systems have different kexts
 AMDRyzenCPUPowerManagement | AMD CPU power management
+AMFIPass | Disable AMFI 
 AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
-BFixup | Downgrading the OpenGL version.
 BlueToolFixup | Bluetooth repair patch
 BrightnessKeys | Brightness adjustment keys
 CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter).
