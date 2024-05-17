@@ -6,7 +6,7 @@ ROG-Zephyrus-G14-GA401-Hackintosh Changelog
 - Add AMFIPass.kext to replace boot-args.
 - Update Applealc, AirportItlwm, SMCRadeonSensors, NootedRed.
 - Use Apple's native USB map kexts instead of USBToolbox.
-- Fix #39, #13
+- Fix #39, #22
 - Add Changelog.md
 - Update README.md
 
