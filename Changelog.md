@@ -1,5 +1,11 @@
 ROG-Zephyrus-G14-GA401-Hackintosh Changelog
 ==================
+#### May 26, 2024
+
+- Update SMCRadeonSensors
+- Fix typo in README.md
+- Update ACPI patch to make it work only on macOS to avoid interference with Windows
+
 #### May 17, 2024
 
 - Update OpenCore to version 1.0.0.

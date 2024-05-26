@@ -38,7 +38,7 @@
 - OpenCore version: 1.0.0.
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
-  - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `ncpi=0x2000` to the boot-args.
+  - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `npci=0x2000` to the boot-args.
   Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding` in the [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool by going to Device Manager > PCI Subsystem Settings.
   - Turn off `Secure Boot` and `Fast Boot`
 - Updating EFI may require clearing NVRAM to take full effect.
@@ -65,7 +65,6 @@
 
 - CPU / IGPU
   - Use [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) for CPU power management and temperature monitoring.
-  - Use [RadeonSensor](https://github.com/NootInc/RadeonSensor) to monitor GPU temperature.
 - WIFI/Bluetooth
 - Apple ID & iMessages & iCloud
 - Interrupt mode touchpad and keyboard input
@@ -141,12 +140,10 @@ Lilu | Essential
 NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
 NVMeFix | NVMe hard drive power management
 RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware
-RadeonSensor | Get AMD graphics card temperature information
 SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
 SMCBatteryManager | Battery management
 SMCLightSensor | For ambient light sensors on laptops
-SMCRadeonGPU.kext | Get AMD graphics card temperature information
-USBToolBox | USB Map
+SMCRadeonSensors | Get AMD graphics card temperature information
 USBMap | USB Map
 VirtualSMC | Essential
 VoodooI2C | Touchpad or touch screen driver

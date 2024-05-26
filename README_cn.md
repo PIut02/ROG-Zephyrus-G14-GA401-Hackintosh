@@ -37,7 +37,7 @@
 - OpenCore版本: 1.0.0.
 - BIOS设置:
   - 建议使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具中增大显存：操作方法为在 Device Manager > AMD CBS > NBIO Common Options > GFX Configuration 中调整 `IGPU Configuration` 为 `UMA_SPECIFIED` ，然后调整 `UMA Frame buffer Size` 最少 1G 建议 2G
-  - 通过开启 `Above 4G decoding` 或者在 boot-args 中添加 `ncpi=0x2000` 参数来避免安装卡住
+  - 通过开启 `Above 4G decoding` 或者在 boot-args 中添加 `npci=0x2000` 参数来避免安装卡住
     使用 [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) 工具在 Device Manager > PCI Subsystem Settings 中开启 `Above 4G decoding`
   - 关闭 `Secure Boot` 和 `Fast Boot`
 - 更新EFI可能需要清除 NVRAM 才能完全生效.
@@ -63,7 +63,6 @@
 
 - CPU / IGPU
   - 使用 [AMDPowerGadget](https://github.com/trulyspinach/SMCAMDProcessor) 进行CPU能源管理和温度查看
-  - 使用 [RadeonSensor](https://github.com/NootInc/RadeonSensor) 查看GPU温度
 - WIFI / 蓝牙
 - Apple ID / iMessages / iCloud
 - 中断模式触摸板和键盘输入
@@ -138,12 +137,10 @@ Lilu | 必备
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 NVMeFix | NVMe硬盘电源管理
 RestrictEvents | 用于阻止导致不同硬件兼容性问题的不需要的进程，并解锁对仅限于其他硬件的某些功能的支持
-RadeonSensor | 获取AMD显卡温度信息
 SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
 SMCBatteryManager | 电池管理
 SMCLightSensor | 用于笔记本电脑上的环境光传感器
-SMCRadeonGPU.kext | 获取AMD显卡温度信息
-USBToolBox | USB定制
+SMCRadeonSensors | 获取AMD显卡温度信息
 USBMap | USB定制
 VirtualSMC | 必备
 VoodooI2C | 触控板或触屏驱动
