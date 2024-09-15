@@ -35,17 +35,13 @@
 - Available version of this repository: Sonoma 14.4 or above.
 - The model information has been removed, please generate and replace it yourself.
   - The SystemProductName must be one of the following: `MacbookPro16,3`, `iMac20,1`, `iMacPro1,1`.
-- OpenCore version: 1.0.0.
+- OpenCore version: 1.0.1.
 - BIOS settings:
   - Suggest using [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to increase VRAM, Go to Device Manager > AMD CBS > NBIO Common Options > GFX Configuration and adjust the `IGPU Configuration` to `UMA_SPECIFIED`. Then, set the `UMA Frame buffer Size` to at least 1G and recommend 2G.
   - To prevent installation freezing, you can either enable the `Above 4G Decoding` or add the `npci=0x2000` to the boot-args.
   Use [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool to enable `Above 4G decoding` in the [UMAF](https://github.com/DavidS95/Smokeless_UMAF/) tool by going to Device Manager > PCI Subsystem Settings.
   - Turn off `Secure Boot` and `Fast Boot`
 - Updating EFI may require clearing NVRAM to take full effect.
-
-> [!Warning]
-> When installing or updating the system, be sure to disable the `NootedRed` driver in `config.plist`, otherwise the installation process will get stuck at the progress bar and cannot be installed normally.
->
 
 ## Configuration
 
@@ -101,7 +97,7 @@
   | CPBStatus | 0                                 | CPB status                                                   |
   | SpeedID   | 0                                 | ID value in the frequency table; check the specific frequency by opening `AMD Power Gadget.app` and navigating to `Speed`->`Advanced Options` |
 
-- The NootedRed modified by @htmambo includes the patch from `BFixup.kext`. The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter problems, switch to the [official repository](https://github.com/ChefKissInc/NootedRed) instead of the forked one.
+- The NootedRed modified by @htmambo includes the patch from `BFixup.kext`. The `BFixup.kext` downgrades the OpenGL version to prevent system freezing, allowing certain applications like Chrome to work normally. However, it may also cause some applications to not work. If you encounter problems, switch to the [official repository](https://github.com/ChefKissInc/NootedRed) instead of the forked one or delete `-bfixup` in `boot-args`.
 
 ## Know Your EFI
 
@@ -130,9 +126,9 @@ AppleALC | Audio driver
 AppleMCEReporterDisabler | Turn off AppleIntelMCEReporter to avoid errors on AMD CPU devices
 BlueToolFixup | Bluetooth repair patch
 BrightnessKeys | Brightness adjustment keys
-CPUTscSync | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter).
 ECEnabler | Battery reading
 FeatureUnlock | Unlock features on unsupported models
+ForgedInvariant | To mitigate certain issues, it is advisable to synchronize the CPU's TSC (Time Stamp Counter). 
 HoRNDIS | Support Android device USB shared network
 IntelBTPatcher | Bluetooth driver
 IntelBluetoothFirmware | Bluetooth driver

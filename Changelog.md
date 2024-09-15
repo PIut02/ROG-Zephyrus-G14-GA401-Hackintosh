@@ -1,5 +1,16 @@
 ROG-Zephyrus-G14-GA401-Hackintosh Changelog
 ==================
+#### Sep 15, 2024
+
+- Update opencore to 1.0.1.
+- Update many kexts to the latest versions.
+- Add custom SMCProcessorAMD.kext to read fan readings, but still seems to have issues.
+- Due to issues with 4900hs with CPUTscSync.kext, using ForgedInvariant.kext as a replacement.
+- Now using boot-args to control the enablement of the bfixup patch, thanks to [htmambo](https://github.com/htmambo).
+- Intel wifi is broken on macOS Sequoia, so will not update to Sequoia for now.
+- You no longer need to disable NootedRed.kext when installing and updating macOS.
+- Update README.md
+
 #### May 26, 2024
 
 - Update SMCRadeonSensors

@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21H1123</string>
+	<string>24A5327a</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>NootedRed</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ChefKissInc.NootedRed</string>
+	<string>org.ChefKiss.NootedRed</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -29,198 +29,25 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>13F100</string>
+	<string></string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>12.3</string>
+	<string>14.5</string>
 	<key>DTSDKBuild</key>
-	<string>21E226</string>
+	<string>23F73</string>
 	<key>DTSDKName</key>
-	<string>macosx12.3</string>
+	<string>macosx14.5</string>
 	<key>DTXcode</key>
-	<string>1341</string>
+	<string>1540</string>
 	<key>DTXcodeBuild</key>
-	<string>13F100</string>
+	<string>15F31d</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>AMDGPUWrangler</key>
+		<key>org.ChefKiss.NootedRed</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.kext.AMDRadeonX6000Framebuffer</string>
-			<key>IOClass</key>
-			<string>AMDRadeonX6000_AmdGpuWrangler</string>
-			<key>IOMatchCategory</key>
-			<string>IOFramebuffer</string>
-			<key>IOPCIMatch</key>
-			<string>0x15DD1002 0x15D81002 0x15E71002 0x164C1002 0x16381002 0x16361002</string>
-			<key>IOPCITunnelCompatible</key>
-			<true/>
-			<key>IOProbeScore</key>
-			<integer>60000</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-		</dict>
-		<key>AMDRadeonPicassoController</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.kext.AMDRadeonX6000Framebuffer</string>
-			<key>IOClass</key>
-			<string>AMDRadeonX6000_AmdRadeonControllerNavi10</string>
-			<key>IOMatchCategory</key>
-			<string>ATIFramebuffer</string>
-			<key>IOPCIMatch</key>
-			<string>0x15D81002</string>
-			<key>IOPCITunnelCompatible</key>
-			<true/>
-			<key>IOPCIUseDeviceMapper</key>
-			<true/>
-			<key>IOProbeScore</key>
-			<integer>6000</integer>
-			<key>IOPropertyMatch</key>
-			<dict>
-				<key>LoadController</key>
-				<true/>
-			</dict>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>aty_config</key>
-			<dict>
-				<key>CFG_CORRECT_BLPT</key>
-				<true/>
-				<key>CFG_TRANS_WSRV</key>
-				<true/>
-				<key>CFG_UFL_CHK</key>
-				<false/>
-				<key>CFG_UFL_STP</key>
-				<false/>
-				<key>CFG_USE_DPT</key>
-				<true/>
-			</dict>
-			<key>aty_properties</key>
-			<dict>
-				<key>PP_GPUPowerDownEnabled</key>
-				<integer>0</integer>
-				<key>PP_GfxOffControl</key>
-				<integer>1</integer>
-				<key>PP_ToolsLogSpaceSize</key>
-				<integer>524288</integer>
-				<key>PP_WorkLoadPolicyMask</key>
-				<integer>0</integer>
-			</dict>
-		</dict>
-		<key>AMDRadeonRavenController</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.kext.AMDRadeonX6000Framebuffer</string>
-			<key>IOClass</key>
-			<string>AMDRadeonX6000_AmdRadeonControllerNavi10</string>
-			<key>IOMatchCategory</key>
-			<string>ATIFramebuffer</string>
-			<key>IOPCIMatch</key>
-			<string>0x15DD1002</string>
-			<key>IOPCITunnelCompatible</key>
-			<true/>
-			<key>IOPCIUseDeviceMapper</key>
-			<true/>
-			<key>IOProbeScore</key>
-			<integer>6000</integer>
-			<key>IOPropertyMatch</key>
-			<dict>
-				<key>LoadController</key>
-				<true/>
-			</dict>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>aty_config</key>
-			<dict>
-				<key>CFG_CORRECT_BLPT</key>
-				<true/>
-				<key>CFG_TRANS_WSRV</key>
-				<true/>
-				<key>CFG_UFL_CHK</key>
-				<false/>
-				<key>CFG_UFL_STP</key>
-				<false/>
-				<key>CFG_USE_DPT</key>
-				<true/>
-			</dict>
-			<key>aty_properties</key>
-			<dict>
-				<key>DalForceSingleDispPipeSplit</key>
-				<integer>1</integer>
-				<key>PP_DisableVoltageIsland</key>
-				<integer>1</integer>
-				<key>PP_DriverEnableNBDPM</key>
-				<integer>1</integer>
-				<key>PP_GPUPowerDownEnabled</key>
-				<integer>0</integer>
-				<key>PP_GfxOffControl</key>
-				<integer>1</integer>
-				<key>PP_SclkDeepSleepDisable</key>
-				<integer>0</integer>
-				<key>PP_ThermalAutoThrottlingEnable</key>
-				<integer>1</integer>
-				<key>PP_ToolsLogSpaceSize</key>
-				<integer>524288</integer>
-				<key>PP_WorkLoadPolicyMask</key>
-				<integer>0</integer>
-			</dict>
-		</dict>
-		<key>AMDRadeonRenoirController</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.kext.AMDRadeonX6000Framebuffer</string>
-			<key>IOClass</key>
-			<string>AMDRadeonX6000_AmdRadeonControllerNavi10</string>
-			<key>IOMatchCategory</key>
-			<string>ATIFramebuffer</string>
-			<key>IOPCIMatch</key>
-			<string>0x15E71002 0x164C1002 0x16381002 0x16361002</string>
-			<key>IOPCITunnelCompatible</key>
-			<true/>
-			<key>IOPCIUseDeviceMapper</key>
-			<true/>
-			<key>IOProbeScore</key>
-			<integer>6000</integer>
-			<key>IOPropertyMatch</key>
-			<dict>
-				<key>LoadController</key>
-				<true/>
-			</dict>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>aty_config</key>
-			<dict>
-				<key>CFG_CORRECT_BLPT</key>
-				<true/>
-				<key>CFG_TRANS_WSRV</key>
-				<true/>
-				<key>CFG_UFL_CHK</key>
-				<false/>
-				<key>CFG_UFL_STP</key>
-				<false/>
-				<key>CFG_USE_DPT</key>
-				<true/>
-			</dict>
-			<key>aty_properties</key>
-			<dict>
-				<key>DalForceSingleDispPipeSplit</key>
-				<integer>1</integer>
-				<key>PP_GPUPowerDownEnabled</key>
-				<integer>0</integer>
-				<key>PP_GfxOffControl</key>
-				<integer>1</integer>
-				<key>PP_ToolsLogSpaceSize</key>
-				<integer>524288</integer>
-				<key>PP_WorkLoadPolicyMask</key>
-				<integer>0</integer>
-			</dict>
-		</dict>
-		<key>com.ChefKissInc.NootedRed</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.ChefKissInc.NootedRed</string>
+			<string>org.ChefKiss.NootedRed</string>
 			<key>IOClass</key>
 			<string>NootedRed</string>
 			<key>IOMatchCategory</key>
@@ -234,7 +61,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>10.15</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2022-2024 ChefKiss Inc. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
+	<string>Copyright © 2022-2024 ChefKiss. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0</string>
 	<key>OSBundleLibraries</key>
