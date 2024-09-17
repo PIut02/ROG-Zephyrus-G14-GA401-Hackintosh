@@ -133,10 +133,13 @@ IntelBluetoothFirmware | 蓝牙驱动
 Lilu | 必备
 NullEthernet | 使无网口设备在MacOS可以登录iCloud
 NVMeFix | NVMe硬盘电源管理
+RealtekCardReader | 读卡器驱动 
+RealtekCardReaderFriend | 读卡器驱动 
 RestrictEvents | 用于阻止导致不同硬件兼容性问题的不需要的进程，并解锁对仅限于其他硬件的某些功能的支持
 SMCAMDProcessor | AMDRyzenCPUPowerManagement的附属
 SMCBatteryManager | 电池管理
 SMCLightSensor | 用于笔记本电脑上的环境光传感器
+SMCProcessorAMD | 风扇读取 
 SMCRadeonSensors | 获取AMD显卡温度信息
 USBMap | USB定制
 VirtualSMC | 必备

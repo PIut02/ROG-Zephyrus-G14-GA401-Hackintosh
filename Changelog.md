@@ -1,5 +1,15 @@
 ROG-Zephyrus-G14-GA401-Hackintosh Changelog
 ==================
+#### Sep 17, 2024
+
+- Fixed audio issues for the G14 (2021); now able to drive all four speakers. Close #46.
+- Added nodgpu patch for G14 (2021) to disable discrete graphics.
+- Added support for booting Linux.
+- SIP is disabled by default.
+- Added card reader support for G14 (2021).
+- Added codec for G14 (2021).
+- Update README.md
+
 #### Sep 15, 2024
 
 - Update opencore to 1.0.1.

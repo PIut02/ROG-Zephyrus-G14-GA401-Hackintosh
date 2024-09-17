@@ -40,6 +40,14 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-NODGPU.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
                     <string>SSDT-PLUG-ALT.aml</string>
                     <key>Enabled</key>
                     <true/>
@@ -112,6 +120,126 @@
             </array>
             <key>Patch</key>
             <array>
+                <dict>
+                    <key>Base</key>
+                    <string>\_SB.PCI0.GPP0</string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>ExtremeXT | _OFF to XOFF Rename | dGPU Disable</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>Dl9PRkY=</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>DlhPRkY=</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string>\_SB.PCI0.SBRG.EC0_</string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>ExtremeXT | _REG to XREG Rename | dGPU Disable</string>
+                    <key>Count</key>
+                    <integer>1</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1JFRw==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WFJFRw==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>ExtremeXT | _PTS to ZPTS Rename | dGPU Disable</string>
+                    <key>Count</key>
+                    <integer>1</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1BUUw==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WlBUUw==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>ExtremeXT | _WAK to ZWAK Rename | dGPU Disable</string>
+                    <key>Count</key>
+                    <integer>1</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1dBSw==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WldBSw==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
                 <dict>
                     <key>Base</key>
                     <string></string>
@@ -323,7 +451,7 @@
                     <key>Count</key>
                     <integer>1</integer>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>Find</key>
                     <data>bWFjT1M=</data>
                     <key>Identifier</key>
@@ -390,15 +518,159 @@
         <dict>
             <key>Add</key>
             <dict>
+                <key>PciRoot(0x0)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x0,0x2)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x14,0x3)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x2)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x3)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x4)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x5)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x6)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x18,0x7)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x4)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>built-in</key>
                     <data>AA==</data>
                 </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x2)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x3)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x4)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x5)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
                 <key>PciRoot(0x0)/Pci(0x8,0x1)/Pci(0x0,0x6)</key>
                 <dict>
+                    <key>alctcsel</key>
+                    <data>AQAAAA==</data>
                     <key>layout-id</key>
-                    <integer>66</integer>
+                    <integer>33</integer>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x2)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x2)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x8,0x2)/Pci(0x0,0x1)</key>
+                <dict>
+                    <key>pci-aspm-default</key>
+                    <data>AwEAAA==</data>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -468,7 +740,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.9.1 | AppleALC.kext</string>
+                    <string>V1.9.2 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -941,6 +1213,42 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AMFIPass</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>RealtekCardReader.kext</string>
+                    <key>Comment</key>
+                    <string>V0.9.7</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RealtekCardReader</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>RealtekCardReaderFriend.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.4</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RealtekCardReaderFriend</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -1740,7 +2048,7 @@
                 <key>ProvideCurrentCpuInfo</key>
                 <true/>
                 <key>SetApfsTrimTimeout</key>
-                <integer>-1</integer>
+                <integer>0</integer>
                 <key>ThirdPartyDrives</key>
                 <false/>
                 <key>XhciPortLimit</key>
@@ -2218,7 +2526,9 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>keepsyms=1 swd_panic=1 revpatch=auto,sbvmm -wegnoegpu -ChefKissInternal -bfixup</string>
+                    <string>keepsyms=1 swd_panic=1 revpatch=auto,sbvmm -ChefKissInternal -bfixup</string>
+                    <key>csr-active-config</key>
+                    <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
                     <data>ZW4tVVM6MA==</data>
                     <key>run-efi-updater</key>
@@ -2473,6 +2783,30 @@
                     <false/>
                     <key>Path</key>
                     <string>CrScreenshotDxe.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>LoadEarly</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>OpenLinuxBoot.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>LoadEarly</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>Ext4Dxe.efi</string>
                 </dict>
             </array>
             <key>Input</key>

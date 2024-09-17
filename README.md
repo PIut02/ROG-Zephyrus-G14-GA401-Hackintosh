@@ -135,10 +135,13 @@ IntelBluetoothFirmware | Bluetooth driver
 Lilu | Essential
 NullEthernet | Allows devices without Ethernet ports to log in to iCloud on MacOS
 NVMeFix | NVMe hard drive power management
+RealtekCardReader | Card reader 
+RealtekCardReaderFriend | Card reader 
 RestrictEvents | [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for blocking unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware
 SMCAMDProcessor | Subsidiary of AMDRyzenCPUPowerManagement
 SMCBatteryManager | Battery management
 SMCLightSensor | For ambient light sensors on laptops
+SMCProcessorAMD | For fan reading 
 SMCRadeonSensors | Get AMD graphics card temperature information
 USBMap | USB Map
 VirtualSMC | Essential

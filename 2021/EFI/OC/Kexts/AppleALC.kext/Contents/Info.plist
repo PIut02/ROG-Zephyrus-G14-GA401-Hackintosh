@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>23F79</string>
+	<string>23G93</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.9.1</string>
+	<string>1.9.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.9.1</string>
+	<string>1.9.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -33,15 +33,15 @@
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>13.3</string>
+	<string>14.5</string>
 	<key>DTSDKBuild</key>
-	<string>22E245</string>
+	<string>23F73</string>
 	<key>DTSDKName</key>
-	<string>macosx13.3</string>
+	<string>macosx14.5</string>
 	<key>DTXcode</key>
-	<string>1431</string>
+	<string>1540</string>
 	<key>DTXcodeBuild</key>
-	<string>14E300c</string>
+	<string>15F31d</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ALCUserClientProvider</key>
@@ -7021,6 +7021,37 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>CodecID</key>
+					<integer>283902597</integer>
+					<key>CodecName</key>
+					<string>PIut02 - Realtek ALC285 for ROG-Zephyrus-G14</string>
+					<key>ConfigData</key>
+					<data>
+					AScccAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFn
+					HPABZx0AAWceAAFnH0ABdxxBAXcdAQF3HhcB
+					dx+QAYcc8AGHHQABhx4AAYcfQAGXHCABlx0Q
+					AZceiwGXHwIBpxzwAacdAAGnHgABpx9AAbcc
+					8AG3HQABtx4AAbcfQAG3DAIB1xzwAdcdAAHX
+					HgAB1x9AAecc8AHnHQAB5x4AAecfQAIXHFAC
+					Fx0QAhceKwIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>33</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwC
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>Codec</key>
 					<string>Realtek ALC285 for Yoga C740 by fewtarius</string>
 					<key>CodecID</key>
@@ -7481,7 +7512,7 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Realtek ALC289 for Asus ROG Zephyrus G14</string>
+					<string>PIut02 - Realtek ALC289 for ROG-Zephyrus-G14</string>
 					<key>CodecID</key>
 					<integer>283902601</integer>
 					<key>ConfigData</key>
