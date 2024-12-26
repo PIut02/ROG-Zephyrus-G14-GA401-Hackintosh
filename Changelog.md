@@ -1,5 +1,15 @@
 ROG-Zephyrus-G14-GA401-Hackintosh Changelog
 ==================
+#### Dec 26, 2024
+
+- Update opencore to 1.0.3.
+- Still no Sequoia version.
+- Updated many kexts to the latest versions.
+- Removed nodgpu patch for G14 (2021) and NullEthernet.kext because it was ineffective.
+- Added usbreset patch.
+- Added dsdt.aml for two models.
+- Modify device properties to replace RealtekCardReader.kext for easier maintenance.
+
 #### Sep 17, 2024
 
 - Fixed audio issues for the G14 (2021); now able to drive all four speakers. Close #46.
