@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>24B5077a</string>
+	<string>24D60</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,19 +29,19 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>24A336</string>
+	<string>24B75</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>15.0</string>
+	<string>15.1</string>
 	<key>DTSDKBuild</key>
-	<string>24A336</string>
+	<string>24B75</string>
 	<key>DTSDKName</key>
-	<string>macosx15.0</string>
+	<string>macosx15.1</string>
 	<key>DTXcode</key>
-	<string>1600</string>
+	<string>1610</string>
 	<key>DTXcodeBuild</key>
-	<string>16A242d</string>
+	<string>16B40</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>org.ChefKiss.NootedRed</key>
@@ -61,13 +61,13 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>10.15</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2022-2024 ChefKiss. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
+	<string>Copyright © 2022-2025 ChefKiss. Licensed under the Thou Shalt Not Profit License version 1.5. See https://github.com/ChefKissInc/NootedRed/LICENSE for details.</string>
 	<key>OSBundleCompatibleVersion</key>
 	<string>1.0</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>as.vit9696.Lilu</key>
-		<string>1.6.4</string>
+		<string>1.7.0</string>
 		<key>com.apple.iokit.IOPCIFamily</key>
 		<string>1.0.0b1</string>
 		<key>com.apple.kpi.bsd</key>
